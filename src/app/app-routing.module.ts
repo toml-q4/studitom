@@ -13,7 +13,3 @@ const appRoutes: Routes = [
     providers: []
 })
 export class AppRoutingModule { }
-
-export const RoutableComponents = [
-
-];
