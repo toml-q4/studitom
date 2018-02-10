@@ -1,3 +1,20 @@
-<p>
-  bucket works!
-</p>
+<mat-expansion-panel class="fill-remaining-space">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            {{bucket.name}}
+        </mat-panel-title>
+        <mat-panel-description>
+            Due next Monday
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <q4-workflow></q4-workflow>
+    <q4-workflow></q4-workflow>
+    <q4-workflow></q4-workflow>
+    <q4-workflow></q4-workflow>
+
+
+    <mat-action-row>
+        <button mat-button color="primary" (click)="submit()">Submit</button>
+    </mat-action-row>
+</mat-expansion-panel>
