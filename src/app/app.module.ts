@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { DashboardModule } from './views/dashboard/dashboard.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
-import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -15,11 +14,9 @@ import { MaterialModule } from './material.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-
     AppRoutingModule,
     DashboardModule,
-    SharedModule,
-    MaterialModule.forRoot()
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
