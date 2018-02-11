@@ -14,7 +14,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.buckets$ = this.bucketService.get();
-    ///this.buckets$.subscribe();
   }
-
+  trackBucket(index, bucket) {
+    return bucket ? bucket.id : undefined;
+  }
 }

@@ -1,4 +1,4 @@
 <h1>Dashboard</h1>
 <mat-accordion class="example-headers-align">
-    <q4-bucket *ngFor="let bucket of buckets$ | async" [bucket]="bucket"></q4-bucket>
+    <q4-bucket *ngFor="let bucket of buckets$ | async; trackBy: trackBucket " [bucket]="bucket"></q4-bucket>
 </mat-accordion>

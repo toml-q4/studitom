@@ -18,7 +18,10 @@ export class BucketComponent implements OnInit {
 
   ngOnInit() {
     this.workflows$ = this.workflowService.getByBucketId(this.bucket.id);
-    //this.workflows$.subscribe();
+  }
+
+  trackWorkflow(index, workflow) {
+    return workflow ? workflow.id : undefined;
   }
 
   submit() {}
