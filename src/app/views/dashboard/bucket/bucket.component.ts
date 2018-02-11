@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { BucketModel } from 'app/views/dashboard/bucket/bucket.model';
+import { Bucket } from './bucket';
+import { Observable } from 'rxjs/Observable';
+import { Workflow } from '../workflow/workflow';
+import { WorkflowService } from '../shared/workflow.service';
 
 @Component({
   selector: 'q4-bucket',
@@ -7,16 +11,15 @@ import { BucketModel } from 'app/views/dashboard/bucket/bucket.model';
   styleUrls: ['./bucket.component.css']
 })
 export class BucketComponent implements OnInit {
-  bucket: BucketModel;
-
-  constructor() {
-    this.bucket = new BucketModel();
-    this.bucket.id = 1;
-    this.bucket.name = 'First Quarter';
-
+  @Input() bucket: Bucket;
+  workflows$: Observable<Workflow[]>;
+  constructor(private workflowService: WorkflowService) {
   }
 
   ngOnInit() {
+    this.workflows$ = this.workflowService.getByBucketId(this.bucket.id);
+    //this.workflows$.subscribe();
   }
+
   submit() {}
 }
