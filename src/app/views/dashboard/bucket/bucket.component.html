@@ -1,19 +1,19 @@
 <mat-expansion-panel class="fill-remaining-space">
     <mat-expansion-panel-header>
         <mat-panel-title>
-            {{bucket.name}}
+            {{bucket?.name}}
         </mat-panel-title>
         <mat-panel-description>
-            Due next Monday
+
         </mat-panel-description>
     </mat-expansion-panel-header>
-
-    <q4-workflow></q4-workflow>
-    <q4-workflow></q4-workflow>
-    <q4-workflow></q4-workflow>
-    <q4-workflow></q4-workflow>
-
-
+    <ng-template matExpansionPanelContent>
+        <mat-list>
+            <mat-list-item *ngFor="let workflow of workflows$ | async">
+                <q4-workflow [workflow]="workflow"></q4-workflow>
+            </mat-list-item>
+        </mat-list>
+    </ng-template>
     <mat-action-row>
         <button mat-button color="primary" (click)="submit()">Submit</button>
     </mat-action-row>

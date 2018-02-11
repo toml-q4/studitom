@@ -1,0 +1,27 @@
+//https://www.json-generator.com/
+
+{
+    "buckets": [
+        '{{repeat(7, 7)}}',
+        {
+            id: '{{index() + 1}}',
+            name: 'Bucket ' + '{{lorem(5, "words")}}',
+            dueDate: '{{date(new Date(2017, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ssZ")}}'
+        }
+    ],
+    "workflows": [
+        '{{repeat(1, 200)}}',
+        {
+            id: '{{guid()}}',
+            bucketId: '{{integer(1, 7)}}',
+            name: 'Workflow ' + '{{lorem(8, "words")}}',
+            description: '{{lorem(5, "words")}}',
+            editedBy: '{{firstName()}}{{surname()}}',
+            type: '{{random("Event","PressRelease","Presentation")}}',
+            status: '{{random("Live", "LivePending", "InProgress","ForApproval","Unknown")}}',
+            isActive: '{{bool()}}',
+            isDeleted: '{{bool()}}',
+            lastEdited: '{{date(new Date(2017, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ssZ")}}'
+        }
+    ]
+}

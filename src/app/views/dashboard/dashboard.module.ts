@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 import { BucketComponent } from './bucket/bucket.component';
 import { MaterialModule } from 'app/material.module';
 import { WorkflowComponent } from 'app/views/dashboard/workflow/workflow.component';
+import { BucketService } from './shared/bucket.service';
+import { WorkflowService } from './shared/workflow.service';
 
 @NgModule({
     imports: [
@@ -22,7 +24,8 @@ import { WorkflowComponent } from 'app/views/dashboard/workflow/workflow.compone
         WorkflowComponent,
         BucketComponent,
         DashboardComponent
-    ]
+    ],
+    providers: [BucketService, WorkflowService]
 })
 
 export class DashboardModule { }

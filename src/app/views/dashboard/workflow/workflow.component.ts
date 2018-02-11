@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Workflow } from './workflow';
 
 @Component({
   selector: 'q4-workflow',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./workflow.component.css']
 })
 export class WorkflowComponent implements OnInit {
+  @Input() workflow: Workflow;
 
   constructor() { }
 
