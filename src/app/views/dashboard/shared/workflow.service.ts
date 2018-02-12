@@ -11,4 +11,7 @@ export class WorkflowService {
     return this.http.get<Workflow[]>(`http://localhost:3000/buckets/${bucketId}/workflows`);
   }
 
+  get(workflowId: string) {
+    return this.http.get<Workflow>(`http://localhost:3000/workflows/${workflowId}`);
+  }
 }
