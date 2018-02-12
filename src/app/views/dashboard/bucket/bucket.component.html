@@ -9,8 +9,8 @@
     </mat-expansion-panel-header>
     <ng-template matExpansionPanelContent>
         <mat-list>
-            <mat-list-item *ngFor="let workflow of workflows$ | async; trackBy: trackWorkflow">
-                <q4-workflow [workflow]="workflow"></q4-workflow>
+            <mat-list-item *ngFor="let workflowId of workflowIds$ | async">
+                <q4-workflow [workflowId]="workflowId"></q4-workflow>
             </mat-list-item>
         </mat-list>
     </ng-template>

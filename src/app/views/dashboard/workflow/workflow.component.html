@@ -1,1 +1,12 @@
-{{workflow.name}}
+<div class="workflow">
+    <div class="workflow-action">
+        <button mat-button>Preview</button>
+    </div>
+    <div class="workflow-stat">{{statusMessage}}</div>
+
+    <div class="workflow-type">
+        <mat-icon>{{iconWorkflowType}}</mat-icon>
+    </div>
+    <div class="workflow-content">{{workflow?.name}}</div>
+
+</div>

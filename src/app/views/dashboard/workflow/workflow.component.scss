@@ -1,0 +1,18 @@
+// .workflow {
+//     display: flex;
+//     flex-direction: row;
+//     align-items: flex-start;
+//     .workflow-type {
+//         margin: 0 4px;
+//     }
+// }
+.workflow {
+    width: 100%;
+    div {
+        display: inline-block;
+    }
+    .workflow-action,
+    .workflow-stat {
+        float: right;
+    }
+}
