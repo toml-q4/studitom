@@ -8,6 +8,7 @@ import { MaterialModule } from 'app/material.module';
 import { WorkflowComponent } from 'app/views/dashboard/workflow/workflow.component';
 import { BucketService } from './shared/bucket.service';
 import { WorkflowService } from './shared/workflow.service';
+import { LoadingComponent } from '../../shared/loading/loading.component';
 
 @NgModule({
     imports: [
@@ -18,7 +19,8 @@ import { WorkflowService } from './shared/workflow.service';
     declarations: [
         WorkflowComponent,
         BucketComponent,
-        DashboardComponent
+        DashboardComponent,
+        LoadingComponent
     ],
     exports: [
         WorkflowComponent,

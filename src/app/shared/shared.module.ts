@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { NavComponent } from './nav/nav.component';
 import { SharedRoutingModule } from './shared-routing.module';
 import { MaterialModule } from '../material.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
     imports: [
@@ -13,11 +14,13 @@ import { MaterialModule } from '../material.module';
     ],
     declarations: [
         NavComponent,
-        PageNotFoundComponent
+        PageNotFoundComponent,
+        LoginComponent
     ],
     exports: [
         NavComponent,
-        PageNotFoundComponent
+        PageNotFoundComponent,
+        LoginComponent
     ]
 })
 
