@@ -7,6 +7,9 @@ import { DashboardModule } from './views/dashboard/dashboard.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthGuard } from './core/auth.guard';
+import { AuthService } from './core/auth.service';
+import { LoadingComponent } from './shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     DashboardModule,
     SharedModule
   ],
-  providers: [],
+  providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

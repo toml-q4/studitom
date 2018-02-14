@@ -1,4 +1,4 @@
-<div class="workflow">
+<div class="workflow" *ngIf="workflow">
     <div class="workflow-action">
         <button mat-button>Preview</button>
     </div>
@@ -8,5 +8,6 @@
         <mat-icon>{{iconWorkflowType}}</mat-icon>
     </div>
     <div class="workflow-content">{{workflow?.name}}</div>
-
 </div>
+
+<q4-loading *ngIf="!workflow"></q4-loading>

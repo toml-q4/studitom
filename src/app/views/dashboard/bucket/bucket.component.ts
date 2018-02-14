@@ -18,7 +18,7 @@ export class BucketComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.workflowIds$ = this.workflowService.getByBucketId(this.bucket.id).map(workflows => workflows.map(function(w){ return w.id; }));
+    this.workflowIds$ = this.workflowService.getByBucketId(this.bucket.id).map(workflows => workflows.map(function(w) { return w.id; }));
   }
 
   trackWorkflow(index, workflow) {
