@@ -5,6 +5,7 @@ $white: #fff;
     padding: 10px;
     color: $white;
     background-color: $blue;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .24), 0 0 2px rgba(0, 0, 0, .12);
     &.bucket-archived {
         background-color: $green;
     }
