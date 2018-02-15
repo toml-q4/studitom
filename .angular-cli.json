@@ -18,7 +18,7 @@
         "testTsconfig": "tsconfig.spec.json",
         "prefix": "q4",
         "styles": [
-            "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+            "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
             "styles.css"
         ],
         "scripts": [],

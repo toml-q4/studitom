@@ -1,17 +1,14 @@
-<mat-accordion [displayMode]="'default'">
-    <mat-expansion-panel class="fill-remaining-space" hideToggle="true">
+<!-- <mat-accordion [displayMode]="'default'">
+    <mat-expansion-panel>
         <mat-expansion-panel-header>
             <mat-panel-title>
                 {{bucket?.name}}
             </mat-panel-title>
-            <mat-panel-description>
-
-            </mat-panel-description>
         </mat-expansion-panel-header>
         <ng-template matExpansionPanelContent>
             <mat-list>
-                <mat-list-item *ngFor="let workflowId of workflowIds$ | async">
-                    <q4-workflow [workflowId]="workflowId"></q4-workflow>
+                <mat-list-item *ngFor="let workflow of workflows$ | async">
+                    <q4-workflow [workflow]="workflow"></q4-workflow>
                 </mat-list-item>
             </mat-list>
         </ng-template>
@@ -19,4 +16,14 @@
             <button mat-button color="primary" (click)="submit()">Submit</button>
         </mat-action-row>
     </mat-expansion-panel>
-</mat-accordion>
+</mat-accordion> -->
+
+<mat-card (click)="expand()">{{bucket?.name}}</mat-card>
+<div *ngIf="expanded">
+    <mat-list *ngIf="workflows">
+        <mat-list-item *ngFor="let workflow of workflows">
+            <mat-icon matListIcon>folder</mat-icon>
+            <q4-workflow [workflow]="workflow"></q4-workflow>
+        </mat-list-item>
+    </mat-list>
+</div>

@@ -9,8 +9,7 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./workflow.component.scss']
 })
 export class WorkflowComponent implements OnInit, OnChanges {
-  @Input() workflowId: string;
-  workflow: Workflow;
+  @Input() workflow: Workflow;
   iconWorkflowType: string;
   statusMessage: string;
 
@@ -19,11 +18,8 @@ export class WorkflowComponent implements OnInit, OnChanges {
   ngOnInit() {
   }
   ngOnChanges(changes: SimpleChanges): void {
-    this.workflowService.get(changes.workflowId.currentValue).subscribe(workflow => {
-      this.workflow = workflow;
-      this.setIconWorkflowType();
-      this.setStatusMessage();
-     });
+    this.setIconWorkflowType();
+    this.setStatusMessage();
   }
   private setStatusMessage() {
     switch (this.workflow.status) {
