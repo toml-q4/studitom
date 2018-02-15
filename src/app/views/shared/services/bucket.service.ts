@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Bucket } from '../bucket/bucket'
+import { Bucket } from '../domains/bucket';
 
 @Injectable()
 export class BucketService {

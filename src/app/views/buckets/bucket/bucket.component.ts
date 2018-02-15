@@ -1,16 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import { WorkflowService } from '../../shared/services/workflow.service';
-import { Workflow } from '../../shared/domains/workflow';
 import { Bucket } from '../../shared/domains/bucket';
+import { Workflow } from '../../shared/domains/workflow';
+import { WorkflowService } from '../../shared/services/workflow.service';
 
 @Component({
   selector: 'q4-bucket',
-  templateUrl: './bucket.component.prime.html',
-  styleUrls: ['./bucket.component.prime.scss']
+  templateUrl: './bucket.component.html',
+  styleUrls: ['./bucket.component.scss']
 })
 export class BucketComponent implements OnInit {
+
   @Input() bucket: Bucket;
   workflows: Workflow[];
   workflowsLoaded = false;
@@ -44,4 +43,5 @@ export class BucketComponent implements OnInit {
       this.workflowsLoaded = true;
     });
   }
+
 }

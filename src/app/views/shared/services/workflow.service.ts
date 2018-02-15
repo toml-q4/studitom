@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Workflow } from '../workflow/workflow';
+import { Workflow } from '../domains/workflow';
 
 @Injectable()
 export class WorkflowService {

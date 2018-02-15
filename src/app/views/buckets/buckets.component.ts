@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { Bucket } from '../../shared/domains/bucket';
-import { BucketService } from '../../shared/services/bucket.service';
+import { Bucket } from '../shared/domains/bucket';
+import { BucketService } from '../shared/services/bucket.service';
 
 @Component({
-  selector: 'q4-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'q4-buckets',
+  templateUrl: './buckets.component.html',
+  styleUrls: ['./buckets.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class BucketsComponent implements OnInit {
+
   buckets$: Observable<Bucket[]>;
   constructor(private bucketService: BucketService) { }
 
@@ -18,4 +19,5 @@ export class DashboardComponent implements OnInit {
   trackBucket(index, bucket) {
     return bucket ? bucket.id : undefined;
   }
+
 }

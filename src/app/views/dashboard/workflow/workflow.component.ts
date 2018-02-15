@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { Workflow } from './workflow';
-import { WorkflowService } from '../shared/workflow.service';
 import { Observable } from 'rxjs/Observable';
+import { Workflow } from '../../shared/domains/workflow';
+import { WorkflowService } from '../../shared/services/workflow.service';
 
 @Component({
   selector: 'q4-workflow',

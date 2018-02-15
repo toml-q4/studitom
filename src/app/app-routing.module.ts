@@ -5,7 +5,7 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
 
 const appRoutes: Routes = [
     { path: 'login', component: LoginComponent },
-    { path: '', pathMatch: 'full', redirectTo: '/dashboard' },
+    { path: '', pathMatch: 'full', redirectTo: '/buckets' },
     { path: '**', pathMatch: 'full', component: PageNotFoundComponent }
 ];
 

@@ -1,0 +1,25 @@
+$blue: #0f5ca3;
+$green: #1abc9c;
+$white: #fff;
+$black: #000;
+$gray: #ececec;
+$muted: #666;
+$muted-light: #dfdfdf;
+.bucket {
+    padding: 10px;
+    color: $black;
+    background-color: $gray;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .24), 0 0 2px rgba(0, 0, 0, .12);
+    &.bucket-archived {
+        background-color: $green;
+    }
+    .bucket-header {
+        font-size: 24pt;
+        .bucket-actions {
+            float: right;
+        }
+    }
+    .bucket-mini-status {
+        font-size: 10pt;
+    }
+}
