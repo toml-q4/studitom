@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { BucketModel } from 'app/views/dashboard/bucket/bucket.model';
 import { Bucket } from './bucket';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -21,10 +20,6 @@ export class BucketComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.workflowService.getByBucketId(this.bucket.id).subscribe(workflows => {
-      this.workflows = workflows;
-    });
-
   }
 
   trackWorkflow(index, workflow) {
@@ -35,10 +30,19 @@ export class BucketComponent implements OnInit {
     this.expanded = !this.expanded;
 
     if (!this.workflowsLoaded) {
-      this.workflowService.getByBucketId(this.bucket.id).subscribe(workflows => {
-        this.workflows = workflows;
-        this.workflowsLoaded = true;
-      });
+      this.loadWorkflows();
     }
+  }
+
+  refresh() {
+    this.workflowsLoaded = false;
+    this.expand();
+  }
+
+  private loadWorkflows() {
+    this.workflowService.getByBucketId(this.bucket.id).subscribe(workflows => {
+      this.workflows = workflows;
+      this.workflowsLoaded = true;
+    });
   }
 }

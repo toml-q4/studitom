@@ -8,6 +8,6 @@ export class BucketService {
   constructor(private http: HttpClient) { }
 
   get() {
-    return this.http.get<Bucket[]>('http://localhost:3000/buckets');
+    return this.http.get<Bucket[]>('http://localhost:3000/buckets?_sort=archived');
   }
 }

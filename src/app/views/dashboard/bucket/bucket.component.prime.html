@@ -1,7 +1,13 @@
 <div class="bucket" [ngClass]="{'bucket-archived': bucket?.archived}">
-    <div class="bucket-header">{{bucket?.name}}</div>
+    <div class="bucket-header">
+        <span class="bucket-name link" (click)="expand()">{{bucket?.name}}</span>
+        <div class="bucket-actions">
+            <span class="link" (click)="refresh()">Refresh</span>
+        </div>
+    </div>
+    <div class="bucket-mini-status" *ngIf="bucket?.archived">Archived</div>
 
-    <p-table [value]="workflows">
+    <p-table [value]="workflows" *ngIf="expanded">
         <ng-template pTemplate="header">
             <tr>
                 <th>Name</th>
