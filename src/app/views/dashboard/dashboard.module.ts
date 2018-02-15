@@ -9,10 +9,11 @@ import { WorkflowComponent } from 'app/views/dashboard/workflow/workflow.compone
 import { BucketService } from './shared/bucket.service';
 import { WorkflowService } from './shared/workflow.service';
 import { LoadingComponent } from '../../shared/loading/loading.component';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
     imports: [
-        CommonModule,
+        SharedModule,
         DashboardRoutingModule,
         MaterialModule
     ],
