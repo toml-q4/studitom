@@ -1,13 +1,13 @@
-<div class="workflow" *ngIf="workflow">
-    <div class="workflow-action">
+<div class="workflow">
+    <!-- <div class="workflow-action">
         <button mat-button>Preview</button>
     </div>
     <div class="workflow-stat">{{statusMessage}}</div>
 
     <div class="workflow-type">
         <mat-icon>{{iconWorkflowType}}</mat-icon>
-    </div>
+    </div> -->
     <div class="workflow-content">{{workflow?.name}}</div>
 </div>
 
-<q4-loading *ngIf="!workflow"></q4-loading>
+<h1 *ngIf="!workflow">Loading</h1>

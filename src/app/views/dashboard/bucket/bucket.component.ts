@@ -13,17 +13,28 @@ import { WorkflowService } from '../shared/workflow.service';
 })
 export class BucketComponent implements OnInit {
   @Input() bucket: Bucket;
-  workflowIds$: Observable<string[]>;
+  workflows: Workflow[];
+  workflowsLoaded = false;
+  expanded = false;
+
   constructor(private workflowService: WorkflowService) {
   }
 
   ngOnInit() {
-    this.workflowIds$ = this.workflowService.getByBucketId(this.bucket.id).map(workflows => workflows.map(function(w) { return w.id; }));
   }
 
   trackWorkflow(index, workflow) {
     return workflow ? workflow.id : undefined;
   }
 
-  submit() {}
+  expand() {
+    this.expanded = !this.expanded;
+
+    if (!this.workflowsLoaded) {
+      this.workflowService.getByBucketId(this.bucket.id).subscribe(workflows => {
+        this.workflows = workflows;
+        this.workflowsLoaded = true;
+      });
+    }
+  }
 }

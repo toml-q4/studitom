@@ -7,23 +7,24 @@ import { DashboardModule } from './views/dashboard/dashboard.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { AuthGuard } from './core/auth.guard';
-import { AuthService } from './core/auth.service';
-import { LoadingComponent } from './shared/loading/loading.component';
+import { CoreModule } from './core/core.module';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AppRoutingModule,
     DashboardModule,
-    SharedModule
+    CoreModule,
+    SharedModule,
+    AppRoutingModule
   ],
-  providers: [AuthGuard, AuthService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

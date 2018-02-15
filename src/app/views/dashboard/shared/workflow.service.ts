@@ -12,6 +12,6 @@ export class WorkflowService {
   }
 
   get(workflowId: string) {
-    return this.http.get<Workflow>(`http://localhost:3000/workflows/${workflowId}`).delay(500);
+    return this.http.get<Workflow>(`http://localhost:3000/workflows/${workflowId}`).delay(1000);
   }
 }

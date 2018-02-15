@@ -6,10 +6,16 @@ import 'rxjs/add/operator/delay';
 
 @Injectable()
 export class AuthService {
+  TOKEN_KEY = 'token';
   isLoggedIn = false;
   redirectUrl: string;
 
   constructor() { }
+
+  get token() {
+    return localStorage.getItem(this.TOKEN_KEY);
+  }
+
   login(): Observable<boolean> {
     return Observable.of(true).delay(1000).do(val => this.isLoggedIn = true);
   }
