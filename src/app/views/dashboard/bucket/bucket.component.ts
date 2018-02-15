@@ -8,8 +8,8 @@ import { WorkflowService } from '../shared/workflow.service';
 
 @Component({
   selector: 'q4-bucket',
-  templateUrl: './bucket.component.html',
-  styleUrls: ['./bucket.component.scss']
+  templateUrl: './bucket.component.prime.html',
+  styleUrls: ['./bucket.component.prime.scss']
 })
 export class BucketComponent implements OnInit {
   @Input() bucket: Bucket;
@@ -21,6 +21,10 @@ export class BucketComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.workflowService.getByBucketId(this.bucket.id).subscribe(workflows => {
+      this.workflows = workflows;
+    });
+
   }
 
   trackWorkflow(index, workflow) {

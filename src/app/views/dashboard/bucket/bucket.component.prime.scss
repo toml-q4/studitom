@@ -1,0 +1,14 @@
+$blue: #0f5ca3;
+$green: #1abc9c;
+$white: #fff;
+.bucket {
+    padding: 10px;
+    color: $white;
+    background-color: $blue;
+    &.bucket-archived {
+        background-color: $green;
+    }
+    .bucket-header {
+        font-size: 24pt;
+    }
+}

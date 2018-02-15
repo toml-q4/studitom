@@ -3,3 +3,9 @@
    Every toolbar row uses a flexbox row layout. */
     flex: 1 1 auto;
 }
+
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}

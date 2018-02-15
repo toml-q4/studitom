@@ -10,12 +10,14 @@ import { BucketService } from './shared/bucket.service';
 import { WorkflowService } from './shared/workflow.service';
 import { LoadingComponent } from '../../shared/loading/loading.component';
 import { SharedModule } from '../../shared/shared.module';
+import { PrimeUiModule } from '../../prime.ui.module';
 
 @NgModule({
     imports: [
         SharedModule,
         DashboardRoutingModule,
-        MaterialModule
+        MaterialModule,
+        PrimeUiModule
     ],
     declarations: [
         WorkflowComponent,

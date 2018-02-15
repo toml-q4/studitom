@@ -6,7 +6,8 @@
         {
             id: '{{index() + 1}}',
             name: 'Bucket ' + '{{lorem(5, "words")}}',
-            dueDate: '{{date(new Date(2017, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ssZ")}}'
+            dueDate: '{{date(new Date(2017, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ssZ")}}',
+            archived: '{{bool}}'
         }
     ],
     "workflows": [
