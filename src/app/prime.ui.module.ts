@@ -1,14 +1,20 @@
 import { NgModule } from '@angular/core';
-import {TableModule} from 'primeng/table';
-
+import { TableModule } from 'primeng/table';
+import { MenuModule } from 'primeng/menu';
+import { MenuItem } from 'primeng/api';
+import { ButtonModule } from 'primeng/button';
 @NgModule({
     imports:
         [
-          TableModule
+          TableModule,
+          MenuModule,
+          ButtonModule
         ],
     exports:
         [
-          TableModule
+          TableModule,
+          MenuModule,
+          ButtonModule
         ]
 })
 export class PrimeUiModule { }

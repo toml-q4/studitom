@@ -1,7 +1,12 @@
 <div class="topnav" [ngClass]="{'responsive': responsive}">
-    <a href="#home" class="active">Studitom</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-    <a class="icon" (click)="show()">&#9776;</a>
+    <div class="logo"><i class="fas fa-align-justify"></i><span>Studitom</span></div>
+    <div class="client-details">
+        Company ABC Corporation<br/>
+        <a href="#">Preview</a> <span class="separator">|</span> <a href="#">Q4 Web</a>
+    </div>
+    <div class="actions">
+        <a (click)="menu.toggle($event)"><i class="fas fa-user"></i></a>
+        <p-menu #menu popup="popup" [model]="items"></p-menu>
+
+    </div>
 </div>

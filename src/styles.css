@@ -1,7 +1,5 @@
-.fill-remaining-space {
-    /* This fills the remaining space, by using flexbox.
-   Every toolbar row uses a flexbox row layout. */
-    flex: 1 1 auto;
+* {
+    text-rendering: optimizeLegibility;
 }
 
 html,
@@ -11,5 +9,10 @@ body {
 }
 
 .link {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
     cursor: pointer;
 }
