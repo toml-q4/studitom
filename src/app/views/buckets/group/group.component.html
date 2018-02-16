@@ -6,30 +6,27 @@
             <div class="group-description">{{group?.description}}</div>
         </div>
         <div class="group-content-count">{{group?.workflows.length}} {{group?.workflows.length > 1 ? 'items': 'item'}}</div>
-        <div class="group-action link">
-            <!-- <i class="fas" [ngClass]="{'fa-angle-up':expanded,'fa-angle-down':!expanded}"></i> -->
-        </div>
+        <!-- <div class="group-action link">
+            <i class="fas" [ngClass]="{'fa-angle-up':expanded,'fa-angle-down':!expanded}"></i>
+        </div> -->
     </div>
     <div class="group-content" *ngIf="expanded">
-        Some Content Here!
+        <p-table [value]="group?.workflows">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+
+                    <th>Status</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-workflow>
+                <tr>
+                    <td>{{workflow.name}}</td>
+                    <td>{{workflow.type}}</td>
+                    <td>{{workflow.status}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
     </div>
 </div>
-
-
-<!-- <p-table [value]="group?.workflows">
-    <ng-template pTemplate="header">
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-
-            <th>Status</th>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-workflow>
-        <tr>
-            <td>{{workflow.name}}</td>
-            <td>{{workflow.type}}</td>
-            <td>{{workflow.status}}</td>
-        </tr>
-    </ng-template>
-</p-table> -->

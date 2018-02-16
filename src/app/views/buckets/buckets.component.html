@@ -1,3 +1,8 @@
-<div class="bucket" *ngFor="let bucket of buckets$ | async; trackBy: trackBucket;">
-    <q4-bucket [bucket]="bucket"></q4-bucket>
+<div class="buckets">
+    <div class="bucket-filter">
+        <p-dropdown [options]="bucketSelections"></p-dropdown>
+    </div>
+    <div class="bucket" *ngFor="let bucket of buckets$ | async; trackBy: trackBucket;">
+        <q4-bucket [bucket]="bucket"></q4-bucket>
+    </div>
 </div>
