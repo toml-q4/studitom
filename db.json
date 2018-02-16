@@ -1,7 +1,15 @@
 {
+    "groups": [{
+        "id": 1,
+        "bucketId": 1,
+        "name": "Group Good",
+        "workflowIds": [
+            "09041bf3-683f-4ff9-8e87-e3d9f406c8b0", "4848deec-8079-495f-acc2-464f031f30af"
+        ]
+    }],
     "buckets": [{
             "id": 1,
-            "name": "Bucket minim nisi elit proident sit",
+            "name": "Q4 Earning 2018",
             "dueDate": "2017-07-17T03:34:56+04:00",
             "archived": false
         },

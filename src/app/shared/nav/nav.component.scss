@@ -39,12 +39,6 @@ $full-height: 100px;
             }
         }
         &.actions {
-            p-menu {
-                background-color: rgb(241, 175, 15);
-                .ui-menu.ui-menuitem-link {
-                    color: $black;
-                }
-            }
             a {
                 color: $text;
                 font-size: 30px;

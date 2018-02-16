@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavComponent } from './nav/nav.component';
-import { MaterialModule } from '../material.module';
 import { LoginComponent } from './login/login.component';
 import { PrimeUiModule } from '../prime.ui.module';
 
