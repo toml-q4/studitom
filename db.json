@@ -4,6 +4,7 @@
             "id": 1,
             "bucketId": 1,
             "name": "Group Good",
+            "description": "Group Description with a ticket 12345",
             "workflowIds": [
                 "09041bf3-683f-4ff9-8e87-e3d9f406c8b0",
                 "4848deec-8079-495f-acc2-464f031f30af"

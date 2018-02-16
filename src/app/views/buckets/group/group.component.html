@@ -1,5 +1,22 @@
-<div class="group-name">{{group?.name}}</div>
-<p-table [value]="group?.workflows">
+<div class="group" [ngClass]="{'ungrouped': group?.ungrouped}">
+    <div class="group-header">
+        <div class="group-status"></div>
+        <div class="group-details">
+            <div class="group-name">{{group?.name}}</div>
+            <div class="group-description">{{group?.description}}</div>
+        </div>
+        <div class="group-content-count"></div>
+        <div class="group-action link" (click)="expand()">
+            <i class="fas" [ngClass]="{'fa-angle-up': expanded, 'fa-angle-down': !expanded}"></i>
+        </div>
+    </div>
+    <div class="group-content" *ngIf="expanded">
+        Some Content Here!
+    </div>
+</div>
+
+
+<!-- <p-table [value]="group?.workflows">
     <ng-template pTemplate="header">
         <tr>
             <th>Name</th>
@@ -14,4 +31,4 @@
             <td>{{workflow.status}}</td>
         </tr>
     </ng-template>
-</p-table>
+</p-table> -->

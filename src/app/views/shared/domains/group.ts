@@ -8,13 +8,15 @@ import { Workflow } from './workflow';
 // };
 
 export class Group {
-   public id: number;
-   public name: string;
-   public workflows: Workflow[];
-   public workflowIds: string[];
+  public id: number;
+  public name: string;
+  public description: string;
+  public ungrouped: boolean;
+  public workflows: Workflow[];
+  public workflowIds: string[];
 
-   constructor() {
-     this.workflowIds = new Array<string>();
-     this.workflows = new Array<Workflow>();
-   }
+  constructor() {
+    this.workflowIds = new Array<string>();
+    this.workflows = new Array<Workflow>();
+  }
 };

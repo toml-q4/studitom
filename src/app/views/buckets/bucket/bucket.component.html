@@ -1,7 +1,11 @@
 <div class="bucket" [ngClass]="{'bucket-archived': bucket?.archived}">
     <div class="bucket-actions">
-        <span class="link" (click)="refresh()" *ngIf="workflowsLoaded && expanded">
-            <i class="fas fa-sync"></i>
+        <span class="link">
+            <i class="fas fa-cog"></i>
+        </span>
+
+        <span class="link">
+            <i class="fas fa-ellipsis-v"></i>
         </span>
     </div>
     <div class="bucket-header">

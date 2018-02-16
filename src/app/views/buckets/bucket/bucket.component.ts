@@ -55,6 +55,7 @@ export class BucketComponent implements OnInit, OnChanges {
       this.groupService.getByBucketId(this.bucket.id).subscribe(groups => {
         let ungrouped = new Group();
         ungrouped.name = 'Ungrouped Items';
+        ungrouped.ungrouped = true;
         if (groups.length > 0) {
           this.workflows.forEach(workflow => {
             let matched = false;
@@ -75,7 +76,9 @@ export class BucketComponent implements OnInit, OnChanges {
             ungrouped.workflows.push(Object.assign(workflow, {}));
           });
         }
-        groups.push(ungrouped);
+
+        if (ungrouped.workflows.length > 0) groups.push(ungrouped);
+
         this.groups = groups;
       });
     });

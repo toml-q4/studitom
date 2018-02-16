@@ -10,8 +10,13 @@ import { Group } from '../../shared/domains/group';
 })
 export class GroupComponent implements OnInit {
   @Input() group: Group;
+  expanded = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  expand() {
+    this.expanded = !this.expanded;
   }
 }
