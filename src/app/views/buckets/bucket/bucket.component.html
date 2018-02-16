@@ -1,9 +1,12 @@
 <div class="bucket" [ngClass]="{'bucket-archived': bucket?.archived}">
+    <div class="bucket-actions">
+        <span class="link" (click)="refresh()" *ngIf="workflowsLoaded && expanded">
+            <i class="fas fa-sync"></i>
+        </span>
+    </div>
     <div class="bucket-header">
         <span class="bucket-name link" (click)="expand()">{{bucket?.name}}</span>
-        <div class="bucket-actions">
-            <span class="link" (click)="refresh()" *ngIf="workflowsLoaded && expanded"><i class="fas fa-sync"></i></span>
-        </div>
+        <span class="bucket-description">{{bucket?.description}}</span>
     </div>
     <div class="groups" *ngIf="expanded">
         <q4-group [group]="group" *ngFor="let group of groups"></q4-group>

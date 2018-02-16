@@ -6,22 +6,27 @@ $gray: rgb(241, 241, 241);
 $muted: #666;
 $muted-light: #dfdfdf;
 .bucket {
-    padding: 10px;
+    padding: 20px;
     color: $black;
     background-color: $gray;
     border-color: rgb(200, 200, 200);
-    box-shadow: 0 2px 2px rgba(0, 0, 0, .24), 0 0 2px rgba(0, 0, 0, .12);
-    &.bucket-archived {
-        background-color: $green;
-    }
+    border-radius: 4px;
+    
     .bucket-header {
+
         .bucket-name {
             font-size: 24pt;
+            font-weight: 400;
+            color: rgb(41, 122, 197);
+            display: block;
         }
-        .bucket-actions {
-            float: right;
+        .bucket-description {
+            font-size: 16px;
         }
     }
+    .bucket-actions {
+            float: right;
+        }
     .bucket-mini-status {
         font-size: 10pt;
     }
