@@ -9,16 +9,16 @@
         display: flex;
         align-items: center;
         height: 60px;
-
         .group-details {
             flex-grow: 2;
-
             .group-description {
                 font-size: 14px;
             }
         }
+        .group-content-count {
+            font-size: 14px;
+        }
     }
-
     &.ungrouped {
         background-color: rgb(42, 48, 53);
     }

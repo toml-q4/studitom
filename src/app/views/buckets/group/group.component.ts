@@ -10,6 +10,7 @@ import { Group } from '../../shared/domains/group';
 })
 export class GroupComponent implements OnInit {
   @Input() group: Group;
+
   expanded = false;
   constructor() { }
 

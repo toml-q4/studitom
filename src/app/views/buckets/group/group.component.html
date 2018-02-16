@@ -1,13 +1,13 @@
-<div class="group" [ngClass]="{'ungrouped': group?.ungrouped}">
-    <div class="group-header">
+<div class="group link" [ngClass]="{'ungrouped': group?.ungrouped}">
+    <div class="group-header" (click)="expand()">
         <div class="group-status"></div>
         <div class="group-details">
             <div class="group-name">{{group?.name}}</div>
             <div class="group-description">{{group?.description}}</div>
         </div>
-        <div class="group-content-count"></div>
-        <div class="group-action link" (click)="expand()">
-            <i class="fas" [ngClass]="{'fa-angle-up': expanded, 'fa-angle-down': !expanded}"></i>
+        <div class="group-content-count">{{group?.workflows.length}} {{group?.workflows.length > 1 ? 'items': 'item'}}</div>
+        <div class="group-action link">
+            <!-- <i class="fas" [ngClass]="{'fa-angle-up':expanded,'fa-angle-down':!expanded}"></i> -->
         </div>
     </div>
     <div class="group-content" *ngIf="expanded">
@@ -21,6 +21,7 @@
         <tr>
             <th>Name</th>
             <th>Type</th>
+
             <th>Status</th>
         </tr>
     </ng-template>
