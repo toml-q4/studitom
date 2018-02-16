@@ -11,11 +11,9 @@ export class NavComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.items = [{
-            items: [
-                {label: 'Profile', icon: 'fa-id-card',routerLink: ['/profile']},
-                {label: 'Settings', icon: 'fa-cog', routerLink: ['/settings']}
-            ]
-        }];
+    this.items = [
+      {label: 'Profile', icon: 'fa-id-card',routerLink: ['/profile']},
+      {label: 'Settings', icon: 'fa-cog', routerLink: ['/settings']}
+    ];
   }
 }

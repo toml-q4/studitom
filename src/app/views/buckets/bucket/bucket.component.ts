@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Bucket } from '../../shared/domains/bucket';
 import { Workflow } from '../../shared/domains/workflow';
 import { WorkflowService } from '../../shared/services/workflow.service';
@@ -8,7 +8,7 @@ import { WorkflowService } from '../../shared/services/workflow.service';
   templateUrl: './bucket.component.html',
   styleUrls: ['./bucket.component.scss']
 })
-export class BucketComponent implements OnInit {
+export class BucketComponent implements OnInit, OnChanges {
 
   @Input() bucket: Bucket;
   workflows: Workflow[];
@@ -19,6 +19,13 @@ export class BucketComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  ngOnChanges() {
+    this.expanded = !this.bucket.archived;
+    if (this.expanded) {
+      this.loadWorkflows();
+    }
   }
 
   trackWorkflow(index, workflow) {
