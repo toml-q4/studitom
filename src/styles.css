@@ -7,6 +7,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     margin: 0;
+    font-size: 14px;
 }
 
 .link {
@@ -23,8 +24,8 @@ a {
     border: 1px solid;
     border-radius: 4px;
     font-weight: 700;
-    font-size: 14px;
     margin: 0 2px;
+    font-size: 12px;
 }
 
 .support-link.jira {
@@ -35,4 +36,9 @@ a {
 .support-link.zendesk {
     border-color: #1c8a93;
     color: #1c8a93;
+}
+
+.support-link.dark-background {
+    color: #fff;
+    border-color: #fff;
 }

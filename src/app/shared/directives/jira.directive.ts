@@ -5,6 +5,7 @@ import { Directive, OnChanges, ElementRef, Input } from '@angular/core';
 })
 export class JiraDirective  implements OnChanges {
   @Input() textWithId: string;
+  @Input() darkBackground: boolean;
   constructor(private el: ElementRef) {
   }
   ngOnChanges(changes) {
@@ -20,7 +21,7 @@ export class JiraDirective  implements OnChanges {
       const matchedIds = currentHTML.match(matcher);
 
       matchedIds.forEach(matchId => {
-        currentHTML = currentHTML.replace(matchId, `<a class="support-link jira" href="http://jira.com/${matchId}" target="_blank">JIRA ${matchId}</a>`)
+        currentHTML = currentHTML.replace(matchId, `<a class="support-link ${this.darkBackground ? 'dark-background' : 'jira'}" href="http://jira.com/${matchId}" target="_blank">JIRA ${matchId}</a>`)
       });
 
       this.el.nativeElement.innerHTML = currentHTML;

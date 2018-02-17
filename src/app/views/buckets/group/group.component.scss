@@ -2,7 +2,6 @@
     margin-bottom: 10px;
     background-color: rgb(41, 122, 197);
     border-radius: 4px;
-    font-size: 20px;
     color: #fff;
     .group-header {
         padding: 10px 20px;
@@ -12,19 +11,13 @@
         .group-details {
             flex-grow: 2;
             .group-name {
+                font-size: 20px;
                 width: 100%;
             }
-            .group-description {
-                font-size: 14px;
-                .support-link.zendesk,
-                .support-link.jira {
-                    color: white;
-                    border-color: white;
-                }
-            }
         }
-        .group-content-count {
-            font-size: 14px;
+        .group-expanded-status {
+            margin-left: 10px;
+            font-size: 20px;
         }
     }
     &.ungrouped {
