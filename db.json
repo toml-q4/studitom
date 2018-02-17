@@ -6,7 +6,7 @@
         "id": 1,
         "bucketId": 1,
         "name": "Group Good",
-        "description": "Group Description with a ticket 12345",
+        "description": "Group Description with tickets Z-12345 WEB-1234",
         "workflowIds": [
             "09041bf3-683f-4ff9-8e87-e3d9f406c8b0",
             "4848deec-8079-495f-acc2-464f031f30af"
@@ -15,49 +15,49 @@
     "buckets": [{
             "id": 1,
             "name": "Q4 Earning 2018",
-            "description": "Bucket description with zendesk ticket linked Z-12345",
+            "description": "Bucket description with zendesk ticket linked Z-12345 WEB-1234",
             "dueDate": "2017-07-17T03:34:56+04:00",
             "archived": false
         },
         {
             "id": 2,
             "name": "Bucket excepteur labore irure elit cillum",
-            "description": "Bucket description with zendesk ticket linked Z-12345",
+            "description": "Bucket description with zendesk ticket linked Z-12345 WEB-1234",
             "dueDate": "2018-01-07T12:47:17+05:00",
             "archived": true
         },
         {
             "id": 3,
             "name": "Bucket pariatur dolor voluptate veniam ad",
-            "description": "Bucket description with zendesk ticket linked Z-12345",
+            "description": "Bucket description with zendesk ticket linked Z-12345 WEB-1234",
             "dueDate": "2017-09-02T06:56:13+04:00",
             "archived": false
         },
         {
             "id": 4,
             "name": "Bucket magna do eu eiusmod laborum",
-            "description": "Bucket description with zendesk ticket linked Z-12345",
+            "description": "Bucket description with zendesk ticket linked Z-12345 WEB-1234",
             "dueDate": "2017-04-18T07:24:51+04:00",
             "archived": false
         },
         {
             "id": 5,
             "name": "Bucket ullamco in in eu cupidatat",
-            "description": "Bucket description with zendesk ticket linked Z-12345",
+            "description": "Bucket description with zendesk ticket linked Z-12345 WEB-1234",
             "dueDate": "2018-01-06T01:48:07+05:00",
             "archived": true
         },
         {
             "id": 6,
             "name": "Bucket non sint deserunt mollit incididunt",
-            "description": "Bucket description with zendesk ticket linked Z-12345",
+            "description": "Bucket description with zendesk ticket linked Z-12345 WEB-1234",
             "dueDate": "2017-03-16T10:14:49+04:00",
             "archived": true
         },
         {
             "id": 7,
             "name": "Bucket veniam dolore do elit veniam",
-            "description": "Bucket description with zendesk ticket linked Z-12345",
+            "description": "Bucket description with zendesk ticket linked Z-12345 WEB-1234",
             "dueDate": "2017-07-24T10:34:46+04:00",
             "archived": true
         }

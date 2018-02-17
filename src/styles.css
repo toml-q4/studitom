@@ -17,3 +17,22 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+
+.support-link {
+    padding: 0 6px;
+    border: 1px solid;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0 2px;
+}
+
+.support-link.jira {
+    border-color: rgb(0, 82, 204);
+    color: rgb(0, 82, 204);
+}
+
+.support-link.zendesk {
+    border-color: #1c8a93;
+    color: #1c8a93;
+}

@@ -11,8 +11,16 @@
         height: 60px;
         .group-details {
             flex-grow: 2;
+            .group-name {
+                width: 100%;
+            }
             .group-description {
                 font-size: 14px;
+                .support-link.zendesk,
+                .support-link.jira {
+                    color: white;
+                    border-color: white;
+                }
             }
         }
         .group-content-count {
