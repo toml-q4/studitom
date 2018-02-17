@@ -1,21 +1,20 @@
-<mat-toolbar color="primary">
-    <span>Studitom</span>
-
-    <!-- This fills the remaining space of the current row -->
-    <span class="fill-remaining-space"></span>
-
-    <span>Barrick Gold</span>
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>settings</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu" [overlapTrigger]="false">
-        <button mat-menu-item>
-        <mat-icon>exit_to_app</mat-icon>
-      <span>Q4Web Admin</span>
-      </button>
-        <button mat-menu-item color="warn">
-        <mat-icon>power_settings_new</mat-icon>
-        <span>Log Out</span>
-      </button>
-    </mat-menu>
-</mat-toolbar>
+<div class="topnav" [ngClass]="{'responsive': responsive}">
+    <div class="logo">
+        <span class="logo-icon">
+            <i class="fas fa-align-justify"></i>
+        </span>Studitom</div>
+    <div class="client-details">
+        <span class="client-name">Company ABC Corporation</span>
+        <div class="client-links">
+            <a href="#">Preview</a>
+            <span class="separator">|</span>
+            <a href="#">Q4 Web</a>
+        </div>
+    </div>
+    <div class="actions">
+        <a (click)="menu.toggle($event)">
+            <i class="fas fa-user"></i>
+        </a>
+        <p-menu #menu popup="popup" [model]="items"></p-menu>
+    </div>
+</div>

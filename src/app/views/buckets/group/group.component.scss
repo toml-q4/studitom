@@ -1,0 +1,26 @@
+.group {
+    margin-bottom: 10px;
+    background-color: rgb(41, 122, 197);
+    border-radius: 4px;
+    color: #fff;
+    .group-header {
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        height: 60px;
+        .group-details {
+            flex-grow: 2;
+            .group-name {
+                font-size: 20px;
+                width: 100%;
+            }
+        }
+        .group-expanded-status {
+            margin-left: 10px;
+            font-size: 20px;
+        }
+    }
+    &.ungrouped {
+        background-color: rgb(42, 48, 53);
+    }
+}

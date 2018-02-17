@@ -1,0 +1,73 @@
+$background: rgb(34, 39, 43);
+$text: rgb(255, 255, 255);
+$white: #fff;
+$black: #000;
+$link: rgb(241, 175, 15);
+$separator: #666;
+$full-height: 100px;
+.topnav {
+    background-color: $background;
+    overflow: hidden;
+    height: $full-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 300;
+    padding: 0 30px;
+    >div {
+        color: $text;
+        padding: 0 16px;
+        font-size: 17px;
+        &.logo {
+            padding-left: 0;
+            font-weight: 800;
+            font-size: 30pt;
+            span {
+                margin-right: 10px;
+            }
+        }
+        &.client-details {
+            flex-grow: 2;
+            text-align: right;
+            .client-name {
+                display: block;
+            }
+            span.separator {
+                color: $separator;
+                opacity: 0.5;
+                ;
+            }
+            a {
+                color: $link;
+                font-size: 14px;
+            }
+        }
+        &.actions {
+            a {
+                color: $text;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+
+/* Medium screens */
+
+@media all and (max-width: 800px) {
+    .topnav {
+        /* When on medium sized screens, we center it by evenly distributing empty space around items */
+        justify-content: space-around;
+    }
+}
+
+
+/* Small screens */
+
+@media all and (max-width: 500px) {
+    .topnav {
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
+        height: auto;
+    }
+}

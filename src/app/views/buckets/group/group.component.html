@@ -1,0 +1,42 @@
+<div class="group" [ngClass]="{'ungrouped': group?.ungrouped}">
+    <div class="group-header" (click)="expand()">
+        <div class="group-status"></div>
+        <div class="group-details">
+            <div class="group-name link">{{group?.name}}</div>
+            <div class="group-description" q4Zendesk q4Jira [textWithId]="group?.description" [darkBackground]="true"></div>
+        </div>
+        <div class="group-content-count">{{group?.workflows.length}} {{group?.workflows.length > 1 ? 'items': 'item'}}</div>
+        <div class="group-expanded-status">
+            <span *ngIf="expanded">
+              <i class="fas fa-angle-up"></i>
+          </span>
+            <span *ngIf="!expanded">
+              <i class="fas fa-angle-down"></i>
+          </span>
+        </div>
+    </div>
+    <div class="group-content" *ngIf="expanded">
+        <p-table [value]="group?.workflows">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Preview</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-workflow>
+                <tr>
+                    <td>{{workflow.name}}</td>
+                    <td>{{workflow.type}}</td>
+                    <td>{{workflow.status}}</td>
+                    <td>
+                        <span class="link" (click)="preview(workdlow)">
+                        Preview
+                      </span>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>

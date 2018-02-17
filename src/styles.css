@@ -1,5 +1,44 @@
-.fill-remaining-space {
-    /* This fills the remaining space, by using flexbox.
-   Every toolbar row uses a flexbox row layout. */
-    flex: 1 1 auto;
+* {
+    text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    font-size: 14px;
+}
+
+.link {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.support-link {
+    padding: 0 6px;
+    border: 1px solid;
+    border-radius: 4px;
+    font-weight: 700;
+    margin: 0 2px;
+    font-size: 12px;
+}
+
+.support-link.jira {
+    border-color: rgb(0, 82, 204);
+    color: rgb(0, 82, 204);
+}
+
+.support-link.zendesk {
+    border-color: #1c8a93;
+    color: #1c8a93;
+}
+
+.support-link.dark-background {
+    color: #fff;
+    border-color: #fff;
 }

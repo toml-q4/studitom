@@ -1,0 +1,45 @@
+$blue: rgb(41, 122, 197);
+$green: #1abc9c;
+$white: #fff;
+$black: #000;
+$gray: rgb(241, 241, 241);
+$muted: #666;
+$muted-light: #dfdfdf;
+.bucket {
+    padding: 20px;
+    margin-bottom: 10px;
+    color: $black;
+    background-color: $gray;
+    border-color: rgb(200, 200, 200);
+    border-radius: 4px;
+    .bucket-header {
+        .bucket-name {
+            font-size: 24pt;
+            font-weight: 400;
+            color: $blue;
+            display: block;
+            width: 100%;
+        }
+        .bucket-description {
+            font-size: 16px;
+            color: rgb(84, 91, 98);
+        }
+    }
+    .bucket-actions {
+        float: right;
+        color: rgb(224, 224, 224);
+        font-size: 25px;
+        span {
+            padding-left: 10px;
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+    .bucket-mini-status {
+        font-size: 10pt;
+    }
+    .groups {
+        margin-top: 20px;
+    }
+}

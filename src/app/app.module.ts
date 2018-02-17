@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { ViewsSharedModule } from './views/shared/views.shared.module';
+import { BucketsModule } from './views/buckets/buckets.module';
 
 @NgModule({
   declarations: [
@@ -20,8 +22,10 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
     BrowserAnimationsModule,
     HttpClientModule,
     DashboardModule,
+    BucketsModule,
     CoreModule,
     SharedModule,
+    ViewsSharedModule,
     AppRoutingModule
   ],
   providers: [],
