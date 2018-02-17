@@ -2,11 +2,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from '../../core/auth.guard';
+import { BucketsComponent } from '../buckets/buckets.component';
 
 const routes: Routes = [
-    { path: 'dashboard', canActivate: [AuthGuard], component: DashboardComponent }
+    { path: 'dashboard', canActivate: [AuthGuard], component: BucketsComponent }
 ];
 
 @NgModule({

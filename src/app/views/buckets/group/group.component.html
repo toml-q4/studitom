@@ -22,6 +22,7 @@
                     <th>Name</th>
                     <th>Type</th>
                     <th>Status</th>
+                    <th>Preview</th>
                 </tr>
             </ng-template>
             <ng-template pTemplate="body" let-workflow>
@@ -29,6 +30,11 @@
                     <td>{{workflow.name}}</td>
                     <td>{{workflow.type}}</td>
                     <td>{{workflow.status}}</td>
+                    <td>
+                        <span class="link" (click)="preview(workdlow)">
+                        Preview
+                      </span>
+                    </td>
                 </tr>
             </ng-template>
         </p-table>

@@ -3,4 +3,5 @@ export interface Workflow {
   name: string;
   type: string;
   status: string;
+  languageId: number;
 }

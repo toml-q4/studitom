@@ -12,7 +12,7 @@ export class GroupComponent implements OnInit {
   @Input() group: Group;
 
   expanded = false;
-  constructor() { }
+  constructor(private workflowService: WorkflowService) { }
 
   ngOnInit() {
     this.expanded = this.group.ungrouped;
@@ -20,5 +20,11 @@ export class GroupComponent implements OnInit {
 
   expand() {
     this.expanded = !this.expanded;
+  }
+
+  preview(workflow: Workflow) {
+    this.workflowService.getPreviewLink(workflow).subscribe(previewUrl => {
+      window.open(previewUrl.value, '_blank');
+    })
   }
 }
