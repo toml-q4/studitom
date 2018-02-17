@@ -15,6 +15,7 @@ export class GroupComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.expanded = this.group.ungrouped;
   }
 
   expand() {
