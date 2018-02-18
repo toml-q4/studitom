@@ -10,18 +10,26 @@ import { SelectItem } from 'primeng/api';
   styleUrls: ['./buckets.component.scss']
 })
 export class BucketsComponent implements OnInit {
-
-  buckets$: Observable<Bucket[]>;
-  bucketSelections: SelectItem[];
+  buckets: Bucket[];
+  bucketSelections: SelectItem[] = new Array<SelectItem>();
   bucketSelection: Bucket;
   constructor(private bucketService: BucketService) {
-    this.bucketSelections = [
-      { label: 'Everything active', value: { id: 1, name: 'filter name' } }
-    ];
   }
 
   ngOnInit() {
-    this.buckets$ = this.bucketService.get();
+    this.bucketService.get().subscribe(buckets => {
+      this.buckets = buckets;
+      this.bucketSelections.push({
+        label: 'Everything active',
+        value: { id: 0, name: 'name'}}
+      })
+      buckets.forEach(bucket => {
+        this.bucketSelections.push({
+          label: bucket.name,
+          value: bucket
+        });
+      });
+    });
   }
   trackBucket(index, bucket) {
     return bucket ? bucket.id : undefined;

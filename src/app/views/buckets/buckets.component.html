@@ -1,8 +1,8 @@
 <div class="buckets">
     <div class="bucket-filter">
-        <p-dropdown [options]="bucketSelections"></p-dropdown>
+        <p-dropdown class="dropdown-main" [options]="bucketSelections" [dropdownIcon]="'fas fa-angle-down'" [autoWidth]="false"></p-dropdown>
     </div>
-    <div class="bucket" *ngFor="let bucket of buckets$ | async; trackBy: trackBucket;">
+    <div class="bucket" *ngFor="let bucket of buckets; trackBy: trackBucket;">
         <q4-bucket [bucket]="bucket"></q4-bucket>
     </div>
 </div>
