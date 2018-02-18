@@ -21,8 +21,8 @@ export class BucketsComponent implements OnInit {
       this.buckets = buckets;
       this.bucketSelections.push({
         label: 'Everything active',
-        value: { id: 0, name: 'name'}}
-      })
+        value: { id: 0, name: 'name'}
+      });
       buckets.forEach(bucket => {
         this.bucketSelections.push({
           label: bucket.name,
