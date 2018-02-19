@@ -10,7 +10,7 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
         "premakecss": "node-sass --include-path node_modules/ src/assets/themes/q4/theme.scss -o src/assets/themes/q4/",
-        "makecss": "postcss src/assets/themes/q4/theme.css --use autoprefixer -d src/assets/themes/q4/",
+        "makecss": "postcss src/assets/themes/q4/*.css --use autoprefixer -d src/assets/themes/q4/",
         "prebuild:css": "npm run makecss",
         "build:css": "postcss src/assets/themes/q4/theme.css --use cssnano > src/assets/themes/q4/theme.min.css"
     },
