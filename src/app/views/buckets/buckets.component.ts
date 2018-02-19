@@ -12,7 +12,8 @@ import { SelectItem } from 'primeng/api';
 export class BucketsComponent implements OnInit {
   buckets: Bucket[];
   bucketSelections: SelectItem[] = new Array<SelectItem>();
-  bucketSelection: Bucket;
+  selectedBucket: Bucket;
+  dropdownIcon = 'fas fa-angle-down';
   constructor(private bucketService: BucketService) {
   }
 
@@ -21,7 +22,7 @@ export class BucketsComponent implements OnInit {
       this.buckets = buckets;
       this.bucketSelections.push({
         label: 'Everything active',
-        value: { id: 0, name: 'name'}
+        value: null
       });
       buckets.forEach(bucket => {
         this.bucketSelections.push({
@@ -34,5 +35,7 @@ export class BucketsComponent implements OnInit {
   trackBucket(index, bucket) {
     return bucket ? bucket.id : undefined;
   }
-
+  toggleDropdownIcon(arrowDirection: string) {
+    this.dropdownIcon = 'fas fa-angle-' + arrowDirection;
+  }
 }

@@ -7,12 +7,7 @@
         </div>
         <div class="group-content-count">{{group?.workflows.length}} {{group?.workflows.length > 1 ? 'items': 'item'}}</div>
         <div class="group-expanded-status">
-            <span *ngIf="expanded">
-              <i class="fas fa-angle-up"></i>
-          </span>
-            <span *ngIf="!expanded">
-              <i class="fas fa-angle-down"></i>
-          </span>
+            <i class="fas" [ngClass]="{'fa-angle-up': expanded, 'fa-angle-down': !expanded}"></i>
         </div>
     </div>
     <div class="group-content" *ngIf="expanded">

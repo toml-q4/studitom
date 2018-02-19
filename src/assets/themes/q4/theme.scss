@@ -63,26 +63,52 @@ $inputGroupTextColor: #222222;
     }
 }
 
-.dropdown-main {
-    .ui-dropdown {
-        width: 350px;
-        font-weight: 300;
-        .ui-dropdown-label {
-            height: 44px;
-            display: flex;
-            align-items: center;
-            background-color: #256CAE;
-            color: #fff;
-            padding-left: 15px;
-        }
-        .ui-dropdown-trigger {
-            display: flex;
-            align-items: center;
-            font-size: 20px;
-            background-color: #256CAE;
-            color: #fff;
-            border: none;
-            padding-right: 10px;
+@mixin primary-colors {
+    background-color: #256CAE;
+    border-color: #256CAE;
+    color: #FFF;
+}
+
+.ui-dropdown {
+    font-weight: 300;
+    .ui-dropdown-label {
+        height: 44px;
+        display: flex!important;
+        align-items: center;
+        @include primary-colors;
+        padding-left: 15px;
+    }
+    .ui-dropdown-trigger {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        @include primary-colors;
+        border: none;
+        padding-right: 10px;
+    }
+    .ui-dropdown-panel {
+        background-color: #256CAE;
+        border: 0;
+        margin-top: -2px;
+        border-radius: 0;
+        .ui-dropdown-items-wrapper {
+            .ui-dropdown-items {
+                padding: 0;
+                @include primary-colors;
+                .ui-dropdown-item {
+                    border: 0 none;
+                    cursor: pointer;
+                    padding: 0 20px;
+                    height: 45px;
+                    display: flex;
+                    align-items: center;
+                    border-top: 1px solid #165DA1;
+                    &:hover {
+                        background-color: #165DA1;
+                        color: inherit;
+                    }
+                }
+            }
         }
     }
 }
