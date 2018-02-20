@@ -58,3 +58,35 @@
         text-transform: uppercase;
     }
 }
+
+.op-workflow {
+    
+    .panel-title {
+        text-transform: uppercase;
+        margin: 10px 0;
+    }
+
+    .workflow-name {
+        color: rgb(241, 175, 15);
+        font-size: 16px;
+    }
+
+    .workflow-details {
+        background-color: #111;
+        border-radius: 3px;
+        color: #fff;
+        margin: 20px 0;
+        .workflow-detail {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            height: 30px;
+            border-bottom: 1px solid #333;
+            label {
+                color: #939ba0;
+                padding-right: 4px;
+            }
+        }
+        
+    }
+}
