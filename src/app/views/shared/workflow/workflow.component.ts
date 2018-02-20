@@ -8,6 +8,7 @@ import { Workflow } from '../../shared/domains/workflow';
 })
 export class WorkflowComponent implements OnInit {
   @Input() workflow: Workflow;
+  cbecked: boolean;
   constructor() { }
 
   ngOnInit() {

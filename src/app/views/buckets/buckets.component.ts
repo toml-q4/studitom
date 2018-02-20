@@ -13,7 +13,6 @@ export class BucketsComponent implements OnInit {
   buckets: Bucket[];
   bucketSelections: SelectItem[] = new Array<SelectItem>();
   selectedBucket: Bucket;
-  dropdownIcon = 'fas fa-angle-down';
   constructor(private bucketService: BucketService) {
   }
 
@@ -34,8 +33,5 @@ export class BucketsComponent implements OnInit {
   }
   trackBucket(index, bucket) {
     return bucket ? bucket.id : undefined;
-  }
-  toggleDropdownIcon(arrowDirection: string) {
-    this.dropdownIcon = 'fas fa-angle-' + arrowDirection;
   }
 }

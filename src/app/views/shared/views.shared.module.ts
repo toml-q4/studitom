@@ -7,10 +7,12 @@ import { GroupService } from './services/group.service';
 import { WorkflowsComponent } from './workflows/workflows.component';
 import { WorkflowComponent } from './workflow/workflow.component';
 import { WorkflowsHeaderComponent } from './workflows-header/workflows-header.component';
+import { PrimeUiModule } from '../../prime.ui.module';
 
 @NgModule({
     imports: [
-      SharedModule
+      SharedModule,
+      PrimeUiModule
     ],
     declarations: [
       WorkflowComponent,

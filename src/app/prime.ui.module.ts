@@ -3,6 +3,7 @@ import { TableModule } from 'primeng/table';
 import { MenuModule } from 'primeng/menu';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
+import { CheckboxModule } from 'primeng/checkbox';
 
 @NgModule({
     imports:
@@ -10,14 +11,16 @@ import { DropdownModule } from 'primeng/dropdown';
           TableModule,
           MenuModule,
           ButtonModule,
-          DropdownModule
+          DropdownModule,
+          CheckboxModule
         ],
     exports:
         [
           TableModule,
           MenuModule,
           ButtonModule,
-          DropdownModule
+          DropdownModule,
+          CheckboxModule
         ]
 })
 export class PrimeUiModule { }
