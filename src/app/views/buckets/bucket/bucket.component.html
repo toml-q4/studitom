@@ -13,6 +13,6 @@
         <span class="bucket-description" q4Jira q4Zendesk [textWithId]="bucket?.description"></span>
     </div>
     <div class="groups" *ngIf="expanded">
-        <q4-group [group]="group" *ngFor="let group of groups"></q4-group>
+        <q4-group [group]="group" *ngFor="let group of groups; trackBy: trackByGroupId"></q4-group>
     </div>
 </div>

@@ -31,8 +31,8 @@ export class BucketComponent implements OnInit, OnChanges {
     }
   }
 
-  trackWorkflow(index, workflow) {
-    return workflow ? workflow.id : undefined;
+  trackByGroupId(index, group) {
+    return group ? group.id : undefined;
   }
 
   expand() {
@@ -53,7 +53,7 @@ export class BucketComponent implements OnInit, OnChanges {
       this.workflowsLoaded = true;
 
       this.groupService.getByBucketId(this.bucket.id).subscribe(groups => {
-        let ungrouped = new Group();
+        const ungrouped = new Group();
         ungrouped.name = 'Ungrouped Items';
         ungrouped.ungrouped = true;
         if (groups.length > 0) {
@@ -70,14 +70,13 @@ export class BucketComponent implements OnInit, OnChanges {
               ungrouped.workflows.push(Object.assign(workflow, {}));
             }
           });
-        }
-        else {
+        } else {
           this.workflows.forEach(workflow => {
             ungrouped.workflows.push(Object.assign(workflow, {}));
           });
         }
 
-        if (ungrouped.workflows.length > 0) groups.push(ungrouped);
+        if (ungrouped.workflows.length > 0) { groups.push(ungrouped); }
 
         this.groups = groups;
       });

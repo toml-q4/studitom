@@ -39,7 +39,7 @@ export class WorkflowsComponent implements OnChanges {
     }
   }
 
-  trackById(workflowModel: WorkflowModel) {
-    return workflowModel.id;
+  trackById(index, workflowModel) {
+    return workflowModel ? workflowModel.id : undefined;
   }
 }
