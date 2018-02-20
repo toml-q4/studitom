@@ -1,0 +1,59 @@
+.workflow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #111;
+    height: 80px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    >div {
+        margin: 0 28px;
+    }
+    .workflow-type {
+        font-size: 28px;
+    }
+    .workflow-details {
+        flex-grow: 2;
+        span {
+            display: block;
+        }
+        .workflow-subtitle {
+            color: rgb(147, 155, 160);
+            display: block;
+        }
+    }
+}
+
+.workflow-header {
+    height: 50px;
+    background-color: rgb(52, 152, 219);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    >div {
+        margin: 0 28px;
+    }
+    .workflow-header-item {
+        flex-grow: 3;
+    }
+}
+
+.workflow-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fff;
+    height: 80px;
+    text-align: right;
+    span {
+        background-color: rgb(241, 175, 15);
+        color: #111;
+        padding: 20px;
+        border-radius: 4px;
+        margin: 0 2px;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+}

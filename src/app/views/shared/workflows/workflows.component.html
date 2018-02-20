@@ -1,2 +1,26 @@
-<q4-workflows-header></q4-workflows-header>
-<q4-workflow *ngFor="let workflow of workflows" [workflow]="workflow"></q4-workflow>
+<div class="workflow-header">
+    <div class="workflow-header-item">Item</div>
+    <div class="workflow-header-status">Status</div>
+    <div class="workflow-header-preview">Preview</div>
+    <div class="workflow-header-check">
+        <p-checkbox [(ngModel)]="selectedAll" binary="true" (onChange)="toggleAll()"></p-checkbox>
+    </div>
+</div>
+
+<div class="workflow" *ngFor="let workflow of workflowModels; trackBy: trackById">
+    <div class="workflow-type"><i class="fas fa-microphone"></i></div>
+    <div class="workflow-details">
+        <span>{{workflow.name}}</span>
+        <span class="workflow-subtitle">Updated 00/00/00 @00:00 by jenc</span>
+    </div>
+    <div class="workflow-status">{{workflow.status}}</div>
+    <div class="workflow-preview-link link"><i class="fas fa-external-link-alt"></i></div>
+    <div class="workflow-selection">
+        <p-checkbox [(ngModel)]="workflow.selected" binary="true"></p-checkbox>
+    </div>
+</div>
+
+<div class="workflow-footer">
+    <span class="link">Submit</span>
+    <span class="link">Publish</span>
+</div>
