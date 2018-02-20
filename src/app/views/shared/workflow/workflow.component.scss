@@ -1,0 +1,26 @@
+.workflow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #111;
+    height: 80px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    >div {
+        margin: 0 28px;
+    }
+    .workflow-type {        
+        font-size: 28px;
+    }
+    .workflow-details {
+        flex-grow: 2;
+        span {
+            display: block;
+        }
+        .workflow-subtitle {
+            color: rgb(147, 155, 160);
+            display: block;
+        }
+    }
+}
