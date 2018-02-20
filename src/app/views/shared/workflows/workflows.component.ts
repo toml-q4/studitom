@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Workflow } from '../domains/workflow';
 import { WorkflowModel } from './workflow.model';
+import { OverlayPanel } from 'primeng/overlaypanel';
 
 @Component({
   selector: 'q4-workflows',
@@ -11,6 +12,7 @@ export class WorkflowsComponent implements OnChanges {
   @Input() workflows: Workflow[];
   workflowModels: WorkflowModel[] = new Array<WorkflowModel>();
   selectedAll: boolean;
+  timeout: any;
   constructor() {
     this.loadWorkflows();
   }
@@ -41,5 +43,21 @@ export class WorkflowsComponent implements OnChanges {
 
   trackById(index, workflowModel) {
     return workflowModel ? workflowModel.id : undefined;
+  }
+
+  deplay(time: number) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+  }
+  hoverDelay = 400;
+  workflowTimeout: any;
+  showWorkflow($event, opWorkflow) {
+    clearTimeout(this.workflowTimeout);
+    this.workflowTimeout = setTimeout(() => {
+      opWorkflow.show($event);
+    }, this.hoverDelay);
+  }
+
+  hideWorkflow(opWorkflow) {
+    opWorkflow.hide();
   }
 }

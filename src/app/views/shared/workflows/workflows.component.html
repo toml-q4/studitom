@@ -8,13 +8,17 @@
 </div>
 
 <div class="workflow" *ngFor="let workflow of workflowModels; trackBy: trackById">
-    <div class="workflow-type"><i class="fas fa-microphone"></i></div>
-    <div class="workflow-details">
+    <div class="workflow-type">
+        <i class="fas fa-microphone"></i>
+    </div>
+    <div class="workflow-details" (mouseenter)="showWorkflow($event, opWorkflow)" (mouseout)="hideWorkflow(opWorkflow)">
         <span>{{workflow.name}}</span>
         <span class="workflow-subtitle">Updated 00/00/00 @00:00 by jenc</span>
     </div>
     <div class="workflow-status">{{workflow.status}}</div>
-    <div class="workflow-preview-link link"><i class="fas fa-external-link-alt"></i></div>
+    <div class="workflow-preview-link link">
+        <i class="fas fa-external-link-alt"></i>
+    </div>
     <div class="workflow-selection">
         <p-checkbox [(ngModel)]="workflow.selected" binary="true"></p-checkbox>
     </div>
@@ -24,3 +28,7 @@
     <span class="link">Submit</span>
     <span class="link">Publish</span>
 </div>
+
+<p-overlayPanel #opWorkflow>
+    Content
+</p-overlayPanel>
