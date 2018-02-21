@@ -13,6 +13,9 @@ import { BucketFilter } from './bucketFilter';
 })
 export class BucketsComponent implements OnInit {
   bucketModels: BucketModel[] = new Array<BucketModel>();
+  otherBucketModels: BucketModel[] = new Array<BucketModel>();
+  featuredBucket: BucketModel;
+
   bucketFilterSelections: SelectItem[] = new Array<SelectItem>();
   selectedBucketFilter: BucketFilter;
   constructor(private bucketService: BucketService) {
@@ -31,7 +34,6 @@ export class BucketsComponent implements OnInit {
         bucketModel.dueDate = bucket.dueDate;
         bucketModel.archived = bucket.archived;
         bucketModel.active = true;
-        bucketModel.hidden = false;
 
         if (bucketModel.active) {
           allActiveBuckets.bucketIds.push(bucketModel.id);
@@ -54,14 +56,24 @@ export class BucketsComponent implements OnInit {
 
       this.bucketFilterSelections = bucketFilterSelections;
       this.bucketModels = bucketModels;
-      this.filterBuckets({ value: { bucketIds: this.bucketFilterSelections[0].value.bucketIds}});
+      this.filterBuckets({ value: { bucketIds: this.bucketFilterSelections[0].value.bucketIds } });
     });
   }
   filterBuckets($event: any) {
+    const selectedBucketIds: number[] = $event.value.bucketIds;
+    const selectedBucketModels = new Array<BucketModel>();
+
     this.bucketModels.forEach(bucketModel => {
-      const selectedBucketIds: number[] = $event.value.bucketIds;
-      bucketModel.hidden = selectedBucketIds.indexOf(bucketModel.id) < 0;
+      if (selectedBucketIds.indexOf(bucketModel.id) > -1) {
+        selectedBucketModels.push(Object.assign({}, bucketModel));
+      }
     });
+
+    this.featuredBucket = selectedBucketModels.shift();
+
+    if (selectedBucketModels.length > 0) {
+      this.otherBucketModels = selectedBucketModels;
+    }
   }
   trackByBucketId(index, bucket) {
     return bucket ? bucket.id : undefined;

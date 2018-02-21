@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { TableModule } from 'primeng/table';
 import { MenuModule } from 'primeng/menu';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
@@ -9,7 +8,6 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
 @NgModule({
   imports:
     [
-      TableModule,
       MenuModule,
       ButtonModule,
       DropdownModule,
@@ -18,7 +16,6 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
     ],
   exports:
     [
-      TableModule,
       MenuModule,
       ButtonModule,
       DropdownModule,
