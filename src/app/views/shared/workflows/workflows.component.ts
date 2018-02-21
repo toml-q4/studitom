@@ -10,9 +10,11 @@ import { OverlayPanel } from 'primeng/overlaypanel';
 })
 export class WorkflowsComponent implements OnChanges {
   @Input() workflows: Workflow[];
+  @Input() ungrouped: boolean;
   workflowModels: WorkflowModel[] = new Array<WorkflowModel>();
   selectedAll: boolean;
-  timeout: any;
+  hoverDelay = 400;
+  workflowTimeout: any;
   constructor() {
     this.loadWorkflows();
   }
@@ -48,9 +50,7 @@ export class WorkflowsComponent implements OnChanges {
   deplay(time: number) {
     return new Promise((resolve) => setTimeout(resolve, time));
   }
-  hoverDelay = 400;
-  workflowTimeout: any;
-  showWorkflow($event, opWorkflow) {
+  showWorkflow($event, opWorkflow, workflow: WorkflowModel) {
     clearTimeout(this.workflowTimeout);
     this.workflowTimeout = setTimeout(() => {
       opWorkflow.show($event);

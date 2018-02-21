@@ -11,6 +11,6 @@
         </div>
     </div>
     <div class="group-content" *ngIf="expanded">
-       <q4-workflows [workflows]="group?.workflows"></q4-workflows>
+        <q4-workflows [workflows]="group?.workflows" [ungrouped]="group?.ungrouped"></q4-workflows>
     </div>
 </div>

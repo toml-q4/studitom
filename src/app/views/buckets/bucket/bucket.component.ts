@@ -4,6 +4,7 @@ import { Workflow } from '../../shared/domains/workflow';
 import { WorkflowService } from '../../shared/services/workflow.service';
 import { Group } from '../../shared/domains/group';
 import { GroupService } from '../../shared/services/group.service';
+import { BucketModel } from './bucket.model';
 
 @Component({
   selector: 'q4-bucket',
@@ -11,8 +12,7 @@ import { GroupService } from '../../shared/services/group.service';
   styleUrls: ['./bucket.component.scss']
 })
 export class BucketComponent implements OnInit, OnChanges {
-
-  @Input() bucket: Bucket;
+  @Input() bucket: BucketModel;
   workflows: Workflow[];
   workflowsLoaded = false;
   expanded = false;

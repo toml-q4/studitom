@@ -3,6 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { Bucket } from '../shared/domains/bucket';
 import { BucketService } from '../shared/services/bucket.service';
 import { SelectItem } from 'primeng/api';
+import { BucketModel } from './bucket/bucket.model';
 
 @Component({
   selector: 'q4-buckets',
@@ -10,7 +11,7 @@ import { SelectItem } from 'primeng/api';
   styleUrls: ['./buckets.component.scss']
 })
 export class BucketsComponent implements OnInit {
-  buckets: Bucket[];
+  bucketModels: BucketModel[] = new Array<BucketModel>();
   bucketSelections: SelectItem[] = new Array<SelectItem>();
   selectedBucket: Bucket;
   constructor(private bucketService: BucketService) {
@@ -18,7 +19,17 @@ export class BucketsComponent implements OnInit {
 
   ngOnInit() {
     this.bucketService.get().subscribe(buckets => {
-      this.buckets = buckets;
+      buckets.forEach(bucket => {
+        const bucketModel = new BucketModel();
+        bucketModel.id = bucket.id;
+        bucketModel.name = bucket.name;
+        bucketModel.description = bucket.description;
+        bucketModel.dueDate = bucket.dueDate;
+        bucketModel.archived = bucket.archived;
+        bucketModel.hidden = false;
+
+        this.bucketModels.push(bucketModel);
+      });
       this.bucketSelections.push({
         label: 'Everything active',
         value: null
@@ -31,7 +42,7 @@ export class BucketsComponent implements OnInit {
       });
     });
   }
-  trackBucket(index, bucket) {
+  trackByBucketId(index, bucket) {
     return bucket ? bucket.id : undefined;
   }
 }

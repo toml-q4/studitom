@@ -1,4 +1,4 @@
-<div class="workflow-header">
+<div class="workflow-header" [ngClass]="{'ungrouped': ungrouped}">
     <div class="workflow-header-item">Item</div>
     <div class="workflow-header-status">Status</div>
     <div class="workflow-header-preview">Preview</div>
@@ -9,9 +9,9 @@
 
 <div class="workflow" *ngFor="let workflow of workflowModels; trackBy: trackById">
     <div class="workflow-type">
-        <i class="fas fa-microphone"></i>
+        <i class="fas fa-microphone"></i> {{workflow.type | entityTypeText}}
     </div>
-    <div class="workflow-details" (mouseenter)="showWorkflow($event, opWorkflow)" (mouseout)="hideWorkflow(opWorkflow)">
+    <div class="workflow-details" (mouseenter)="showWorkflow($event, opWorkflow, workflow)" (mouseout)="hideWorkflow(opWorkflow)">
         <span>{{workflow.name}}</span>
         <span class="workflow-subtitle">Updated 00/00/00 @00:00 by jenc</span>
     </div>
