@@ -46,7 +46,7 @@ export class BucketsComponent implements OnInit {
       });
 
       if (allActiveBuckets.bucketIds.length > 0) {
-        bucketFilterSelections.push({
+        bucketFilterSelections.unshift({
           label: `${allActiveBuckets.name} (${allActiveBuckets.bucketIds.length})`,
           value: allActiveBuckets
         });

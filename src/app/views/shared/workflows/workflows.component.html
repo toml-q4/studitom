@@ -9,7 +9,7 @@
 
 <div class="workflow" *ngFor="let workflow of workflowModels; trackBy: trackById">
     <div class="workflow-type">
-        <i class="fas fa-microphone"></i> {{workflow.type | entityTypeText}}
+        <i class="fas fa-microphone"></i>
     </div>
     <div class="workflow-details" (mouseenter)="showWorkflow($event, opWorkflow, workflow)" (mouseout)="hideWorkflow(opWorkflow)">
         <span class="link" (click)="edit(workflow)">{{workflow.name}}</span>

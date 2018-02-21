@@ -6,7 +6,6 @@ import { PrimeUiModule } from '../prime.ui.module';
 import { ZendeskDirective } from './directives/zendesk.directive';
 import { JiraDirective } from './directives/jira.directive';
 import { FormsModule } from '@angular/forms';
-import { EntityTypeTextPipe } from './pipes/entity-type-text.pipe';
 
 @NgModule({
     imports: [
@@ -18,8 +17,7 @@ import { EntityTypeTextPipe } from './pipes/entity-type-text.pipe';
         NavComponent,
         LoginComponent,
         ZendeskDirective,
-        JiraDirective,
-        EntityTypeTextPipe
+        JiraDirective
     ],
     exports: [
         CommonModule,
@@ -27,8 +25,7 @@ import { EntityTypeTextPipe } from './pipes/entity-type-text.pipe';
         LoginComponent,
         ZendeskDirective,
         JiraDirective,
-        FormsModule,
-        EntityTypeTextPipe
+        FormsModule
     ]
 })
 
