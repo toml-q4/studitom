@@ -69,7 +69,7 @@
             "description": "do ullamco tempor aute incididunt",
             "editedBy": "WeberKeller",
             "type": "PressRelease",
-            "status": "ForApproval",
+            "status": "For Approval",
             "isActive": true,
             "isDeleted": true,
             "lastEdited": "2017-08-11T11:26:13+04:00"
@@ -81,7 +81,7 @@
             "description": "culpa labore id nulla aute",
             "editedBy": "DawnBrowning",
             "type": "Presentation",
-            "status": "InProgress",
+            "status": "In Progress",
             "isActive": false,
             "isDeleted": true,
             "lastEdited": "2017-06-05T01:16:47+04:00"
@@ -117,7 +117,7 @@
             "description": "sint cupidatat qui tempor ex",
             "editedBy": "AllysonKirkland",
             "type": "PressRelease",
-            "status": "ForApproval",
+            "status": "For Approval",
             "isActive": true,
             "isDeleted": true,
             "lastEdited": "2017-06-12T04:31:59+04:00"
@@ -201,7 +201,7 @@
             "description": "duis mollit reprehenderit Lorem ut",
             "editedBy": "EthelNorris",
             "type": "Presentation",
-            "status": "InProgress",
+            "status": "In Progress",
             "isActive": false,
             "isDeleted": false,
             "lastEdited": "2018-01-18T04:54:02+05:00"
@@ -213,7 +213,7 @@
             "description": "eiusmod veniam quis nulla deserunt",
             "editedBy": "VelazquezDixon",
             "type": "Presentation",
-            "status": "InProgress",
+            "status": "In Progress",
             "isActive": true,
             "isDeleted": true,
             "lastEdited": "2017-08-25T01:01:41+04:00"
@@ -237,7 +237,7 @@
             "description": "ut laboris do proident non",
             "editedBy": "OdonnellWeber",
             "type": "Presentation",
-            "status": "ForApproval",
+            "status": "For Approval",
             "isActive": false,
             "isDeleted": false,
             "lastEdited": "2017-07-25T12:32:06+04:00"
@@ -285,7 +285,7 @@
             "description": "ex aute ad ex sint",
             "editedBy": "CashRichmond",
             "type": "PressRelease",
-            "status": "ForApproval",
+            "status": "For Approval",
             "isActive": false,
             "isDeleted": true,
             "lastEdited": "2017-03-11T02:54:36+05:00"
@@ -309,7 +309,7 @@
             "description": "in est veniam nostrud aliqua",
             "editedBy": "RosarioPotts",
             "type": "PressRelease",
-            "status": "InProgress",
+            "status": "In Progress",
             "isActive": true,
             "isDeleted": false,
             "lastEdited": "2017-06-10T01:21:31+04:00"
@@ -321,7 +321,7 @@
             "description": "cupidatat laboris dolor aliqua cupidatat",
             "editedBy": "BlancheKerr",
             "type": "Event",
-            "status": "InProgress",
+            "status": "In Progress",
             "isActive": false,
             "isDeleted": false,
             "lastEdited": "2017-01-19T01:17:31+05:00"
@@ -333,7 +333,7 @@
             "description": "officia amet in elit eiusmod",
             "editedBy": "ReidCastillo",
             "type": "PressRelease",
-            "status": "InProgress",
+            "status": "In Progress",
             "isActive": true,
             "isDeleted": true,
             "lastEdited": "2017-05-18T12:09:42+04:00"
@@ -345,7 +345,7 @@
             "description": "veniam ut magna velit consequat",
             "editedBy": "RosellaMorrison",
             "type": "Event",
-            "status": "InProgress",
+            "status": "In Progress",
             "isActive": false,
             "isDeleted": true,
             "lastEdited": "2017-11-13T10:14:36+05:00"
@@ -417,7 +417,7 @@
             "description": "minim ad in enim ad",
             "editedBy": "KeithGilbert",
             "type": "Presentation",
-            "status": "InProgress",
+            "status": "In Progress",
             "isActive": true,
             "isDeleted": true,
             "lastEdited": "2017-05-18T11:45:29+04:00"
@@ -429,7 +429,7 @@
             "description": "ut occaecat do ex ad",
             "editedBy": "AlanaYork",
             "type": "PressRelease",
-            "status": "ForApproval",
+            "status": "For Approval",
             "isActive": true,
             "isDeleted": true,
             "lastEdited": "2017-03-14T04:07:33+04:00"
@@ -453,7 +453,7 @@
             "description": "fugiat nisi id incididunt id",
             "editedBy": "PaulaGallegos",
             "type": "Presentation",
-            "status": "InProgress",
+            "status": "In Progress",
             "isActive": false,
             "isDeleted": false,
             "lastEdited": "2017-03-03T09:44:12+05:00"
@@ -513,7 +513,7 @@
             "description": "sunt dolor aliqua nulla eiusmod",
             "editedBy": "MaddenSingleton",
             "type": "PressRelease",
-            "status": "ForApproval",
+            "status": "For Approval",
             "isActive": true,
             "isDeleted": false,
             "lastEdited": "2017-04-01T12:43:22+04:00"
@@ -525,7 +525,7 @@
             "description": "ullamco voluptate sint labore duis",
             "editedBy": "LizaJustice",
             "type": "Presentation",
-            "status": "ForApproval",
+            "status": "For Approval",
             "isActive": true,
             "isDeleted": true,
             "lastEdited": "2017-03-29T03:30:08+04:00"
@@ -537,7 +537,7 @@
             "description": "ut ad sint qui do",
             "editedBy": "MaxineBeach",
             "type": "PressRelease",
-            "status": "InProgress",
+            "status": "In Progress",
             "isActive": false,
             "isDeleted": false,
             "lastEdited": "2017-09-03T07:09:00+04:00"
@@ -561,7 +561,7 @@
             "description": "id labore ex elit et",
             "editedBy": "LittleMaxwell",
             "type": "Event",
-            "status": "InProgress",
+            "status": "In Progress",
             "isActive": false,
             "isDeleted": false,
             "lastEdited": "2018-02-08T06:16:19+05:00"
@@ -573,7 +573,7 @@
             "description": "anim nostrud quis ipsum incididunt",
             "editedBy": "JohnsonBaldwin",
             "type": "PressRelease",
-            "status": "InProgress",
+            "status": "In Progress",
             "isActive": false,
             "isDeleted": true,
             "lastEdited": "2017-05-23T03:54:35+04:00"
@@ -657,7 +657,7 @@
             "description": "enim ut nulla proident dolor",
             "editedBy": "LloydKoch",
             "type": "Presentation",
-            "status": "ForApproval",
+            "status": "For Approval",
             "isActive": true,
             "isDeleted": true,
             "lastEdited": "2017-07-30T03:39:15+04:00"
@@ -669,7 +669,7 @@
             "description": "ut commodo tempor fugiat quis",
             "editedBy": "IsabelBrewer",
             "type": "Event",
-            "status": "ForApproval",
+            "status": "For Approval",
             "isActive": false,
             "isDeleted": false,
             "lastEdited": "2017-06-28T10:13:14+04:00"
@@ -681,7 +681,7 @@
             "description": "velit occaecat nulla incididunt amet",
             "editedBy": "BrennanCook",
             "type": "Event",
-            "status": "InProgress",
+            "status": "In Progress",
             "isActive": false,
             "isDeleted": false,
             "lastEdited": "2017-05-25T06:05:21+04:00"
@@ -717,7 +717,7 @@
             "description": "mollit laborum tempor magna anim",
             "editedBy": "LangBurgess",
             "type": "Presentation",
-            "status": "InProgress",
+            "status": "In Progress",
             "isActive": false,
             "isDeleted": false,
             "lastEdited": "2017-04-25T10:21:55+04:00"
@@ -729,7 +729,7 @@
             "description": "laborum proident exercitation qui qui",
             "editedBy": "StellaStone",
             "type": "PressRelease",
-            "status": "InProgress",
+            "status": "In Progress",
             "isActive": true,
             "isDeleted": false,
             "lastEdited": "2017-08-17T08:03:37+04:00"
@@ -777,7 +777,7 @@
             "description": "fugiat elit id in fugiat",
             "editedBy": "CarlaRocha",
             "type": "Event",
-            "status": "InProgress",
+            "status": "In Progress",
             "isActive": false,
             "isDeleted": false,
             "lastEdited": "2017-01-28T09:36:53+05:00"
@@ -789,7 +789,7 @@
             "description": "velit aliqua occaecat id anim",
             "editedBy": "SherryVasquez",
             "type": "Presentation",
-            "status": "InProgress",
+            "status": "In Progress",
             "isActive": true,
             "isDeleted": true,
             "lastEdited": "2017-01-01T10:37:45+05:00"

@@ -10,10 +10,6 @@ body {
     font-size: 14px;
 }
 
-.fontawesome-i2svg-active body {
-    display: initial;
-}
-
 .link {
     cursor: pointer;
 }

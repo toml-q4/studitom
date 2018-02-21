@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GridWorkflowComponent } from './grid-workflow.component';
+import { WorkflowsComponent } from './workflows.component';
 
-describe('GridWorkflowComponent', () => {
-  let component: GridWorkflowComponent;
-  let fixture: ComponentFixture<GridWorkflowComponent>;
+describe('WorkflowsComponent', () => {
+  let component: WorkflowsComponent;
+  let fixture: ComponentFixture<WorkflowsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GridWorkflowComponent ]
+      declarations: [ WorkflowsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GridWorkflowComponent);
+    fixture = TestBed.createComponent(WorkflowsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

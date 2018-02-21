@@ -11,27 +11,6 @@
         </div>
     </div>
     <div class="group-content" *ngIf="expanded">
-        <p-table [value]="group?.workflows">
-            <ng-template pTemplate="header">
-                <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Status</th>
-                    <th>Preview</th>
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-workflow>
-                <tr>
-                    <td>{{workflow.name}}</td>
-                    <td>{{workflow.type}}</td>
-                    <td>{{workflow.status}}</td>
-                    <td>
-                        <span class="link" (click)="preview(workdlow)">
-                        Preview
-                      </span>
-                    </td>
-                </tr>
-            </ng-template>
-        </p-table>
+        <q4-workflows [workflows]="group?.workflows" [ungrouped]="group?.ungrouped"></q4-workflows>
     </div>
 </div>

@@ -1,0 +1,51 @@
+<div class="workflow-header" [ngClass]="{'ungrouped': ungrouped}">
+    <div class="workflow-header-item">Item</div>
+    <div class="workflow-header-status">Status</div>
+    <div class="workflow-header-preview">Preview</div>
+    <div class="workflow-header-check">
+        <p-checkbox [(ngModel)]="selectedAll" binary="true" (onChange)="toggleAll()"></p-checkbox>
+    </div>
+</div>
+
+<div class="workflow" *ngFor="let workflow of workflowModels; trackBy: trackById">
+    <div class="workflow-type">
+        <i class="fas fa-microphone"></i>
+    </div>
+    <div class="workflow-details" (mouseenter)="showWorkflow($event, opWorkflow, workflow)" (mouseout)="hideWorkflow(opWorkflow)">
+        <span class="link" (click)="edit(workflow)">{{workflow.name}}</span>
+        <span class="workflow-subtitle">Updated 00/00/00 @00:00 by jenc</span>
+    </div>
+    <div class="workflow-status">{{workflow.status}}</div>
+    <div class="workflow-preview-link link">
+        <i class="fas fa-external-link-alt"></i>
+    </div>
+    <div class="workflow-selection">
+        <p-checkbox [(ngModel)]="workflow.selected" binary="true"></p-checkbox>
+    </div>
+</div>
+
+<div class="workflow-footer">
+    <span class="link">Submit</span>
+    <span class="link">Publish</span>
+</div>
+
+<p-overlayPanel #opWorkflow>
+    <div class="op-workflow">
+        <div class="panel-title">Press Release</div>
+        <div class="workflow-name">Q4 Inc. lauches new partner program to accelerate innovation and drive business for agencies</div>
+        <div class="workflow-details">
+            <div class="workflow-detail">
+                <label>Press Release Date:</label> DD / MM / YY
+            </div>
+            <div class="workflow-detail">
+                <label>Active:</label> Yes
+            </div>
+            <div class="workflow-detail">
+                <label>Deleted:</label> No
+            </div>
+            <div class="workflow-detail">
+                <label>Effective Date:</label> DD / MM / YY @ 2:00pm
+            </div>
+        </div>
+    </div>
+</p-overlayPanel>

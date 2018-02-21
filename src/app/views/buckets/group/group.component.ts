@@ -10,12 +10,21 @@ import { Group } from '../../shared/domains/group';
 })
 export class GroupComponent implements OnInit {
   @Input() group: Group;
+  selectedWorkdlows: Workflow[];
+  cols: any[];
 
   expanded = false;
   constructor(private workflowService: WorkflowService) { }
 
   ngOnInit() {
     this.expanded = this.group.ungrouped;
+
+    this.cols = [
+      { field: 'vin', header: 'Vin' },
+      { field: 'year', header: 'Year' },
+      { field: 'brand', header: 'Brand' },
+      { field: 'color', header: 'Color' }
+  ];
   }
 
   expand() {

@@ -5,11 +5,13 @@ import { LoginComponent } from './login/login.component';
 import { PrimeUiModule } from '../prime.ui.module';
 import { ZendeskDirective } from './directives/zendesk.directive';
 import { JiraDirective } from './directives/jira.directive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     imports: [
         CommonModule,
-        PrimeUiModule
+        PrimeUiModule,
+        FormsModule
     ],
     declarations: [
         NavComponent,
@@ -22,7 +24,8 @@ import { JiraDirective } from './directives/jira.directive';
         NavComponent,
         LoginComponent,
         ZendeskDirective,
-        JiraDirective
+        JiraDirective,
+        FormsModule
     ]
 })
 
