@@ -54,6 +54,8 @@ export class BucketComponent implements OnInit, OnChanges {
   }
 
   private loadWorkflows() {
+    if (this.bucket === undefined) return;
+
     this.workflowService.getByBucketId(this.bucket.id).subscribe(workflows => {
       this.workflows = workflows;
       this.workflowsLoaded = true;

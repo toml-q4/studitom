@@ -60,6 +60,7 @@ export class WorkflowsComponent implements OnChanges {
   }
 
   hideWorkflow(opWorkflow) {
+    clearTimeout(this.workflowTimeout);
     opWorkflow.hide();
   }
 }

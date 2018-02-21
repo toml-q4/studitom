@@ -11,8 +11,12 @@
     <div class="workflow-type">
         <i class="fas fa-microphone"></i>
     </div>
-    <div class="workflow-details" (mouseenter)="showWorkflow($event, opWorkflow, workflow)" (mouseout)="hideWorkflow(opWorkflow)">
-        <span class="link" (click)="edit(workflow)">{{workflow.name}}</span>
+    <div class="link" (mouseover)="showWorkflow($event, opWorkflow, workflow)" (mouseout)="hideWorkflow(opWorkflow)">
+        <i class="fas fa-info-circle"></i>
+    </div>
+    <div class="workflow-details">
+
+        <span class="link" (click)="edit(workflow)" title="Click to edit in new tab">{{workflow.name}}</span>
         <span class="workflow-subtitle">Updated 00/00/00 @00:00 by jenc</span>
     </div>
     <div class="workflow-status">{{workflow.status}}</div>

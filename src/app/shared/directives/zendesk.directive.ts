@@ -15,7 +15,7 @@ export class ZendeskDirective implements OnChanges {
     if (!currentHTML) {
       currentHTML = changes.textWithId.currentValue;
     }
-    if (currentHTML !== undefined) {
+    if (currentHTML !== undefined && currentHTML !== null) {
       const matcher = /(Z-\d+)/g;
 
       const matchedIds = currentHTML.match(matcher);
