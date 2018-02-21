@@ -31,6 +31,7 @@ export class BucketsComponent implements OnInit {
         bucketModel.dueDate = bucket.dueDate;
         bucketModel.archived = bucket.archived;
         bucketModel.active = true;
+        bucketModel.hidden = false;
 
         if (bucketModel.active) {
           allActiveBuckets.bucketIds.push(bucketModel.id);
@@ -44,21 +45,23 @@ export class BucketsComponent implements OnInit {
         bucketModels.push(bucketModel);
       });
 
-      this.bucketFilterSelections = bucketFilterSelections;
-      this.bucketModels = bucketModels;
-
       if (allActiveBuckets.bucketIds.length > 0) {
-        this.bucketFilterSelections.push({
+        bucketFilterSelections.push({
           label: `${allActiveBuckets.name} (${allActiveBuckets.bucketIds.length})`,
           value: allActiveBuckets
         });
       }
 
-      this.selectedBucketFilter = this.bucketFilterSelections[0].value;
+      this.bucketFilterSelections = bucketFilterSelections;
+      this.bucketModels = bucketModels;
+      this.filterBuckets({ value: { bucketIds: this.bucketFilterSelections[0].value.bucketIds}});
     });
   }
   filterBuckets($event: any) {
-    console.log($event);
+    this.bucketModels.forEach(bucketModel => {
+      const selectedBucketIds: number[] = $event.value.bucketIds;
+      bucketModel.hidden = selectedBucketIds.indexOf(bucketModel.id) < 0;
+    });
   }
   trackByBucketId(index, bucket) {
     return bucket ? bucket.id : undefined;
