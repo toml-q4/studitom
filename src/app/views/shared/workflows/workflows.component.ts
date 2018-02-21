@@ -22,7 +22,9 @@ export class WorkflowsComponent implements OnChanges {
   ngOnChanges() {
     this.loadWorkflows();
   }
-
+  edit(workflow: WorkflowModel) {
+    console.log('edit workflow logic for ' + workflow.id);
+  }
   toggleAll() {
     this.workflowModels.forEach(workflowModel => {
       workflowModel.selected = this.selectedAll;
