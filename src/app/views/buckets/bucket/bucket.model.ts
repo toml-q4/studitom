@@ -4,5 +4,5 @@ export class BucketModel {
   public description: string;
   public dueDate: Date;
   public archived: boolean;
-  public hidden: boolean;
+  public active: boolean;
 }
