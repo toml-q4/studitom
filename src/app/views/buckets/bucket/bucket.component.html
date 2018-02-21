@@ -4,7 +4,7 @@
             <i class="fas fa-cog"></i>
         </span>
 
-        <span class="link">
+        <span class="link" (click)="bucketCommands.toggle($event)">
             <i class="fas fa-ellipsis-v"></i>
         </span>
     </div>
@@ -16,3 +16,5 @@
         <q4-group [group]="group" *ngFor="let group of groups; trackBy: trackByGroupId"></q4-group>
     </div>
 </div>
+
+<p-menu #bucketCommands popup="popup" [model]="items"></p-menu>

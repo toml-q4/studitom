@@ -5,6 +5,7 @@ import { WorkflowService } from '../../shared/services/workflow.service';
 import { Group } from '../../shared/domains/group';
 import { GroupService } from '../../shared/services/group.service';
 import { BucketModel } from './bucket.model';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'q4-bucket',
@@ -15,17 +16,22 @@ export class BucketComponent implements OnInit, OnChanges {
   @Input() bucket: BucketModel;
   workflows: Workflow[];
   workflowsLoaded = false;
-  expanded = false;
+  expanded = true;
   groups: Group[];
+  items: MenuItem[];
 
   constructor(private workflowService: WorkflowService, private groupService: GroupService) {
   }
 
   ngOnInit() {
+    this.items = [
+      { label: 'Submit All' },
+      { label: 'Publish All' },
+      { label: 'Archive' }
+    ];
   }
 
   ngOnChanges() {
-    this.expanded = !this.bucket.archived;
     if (this.expanded) {
       this.loadWorkflows();
     }
