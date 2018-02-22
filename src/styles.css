@@ -14,6 +14,22 @@ body {
     cursor: pointer;
 }
 
+.badge {
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 14px;
+}
+
+.badge.badge-muted {
+    color: #fff;
+    background-color: #545b62;
+}
+
+.badge.badge-danger {
+    color: #fff;
+    background-color: #A74343;
+}
+
 a {
     text-decoration: none;
     cursor: pointer;

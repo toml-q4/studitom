@@ -5,7 +5,7 @@
             <div class="group-name link">{{group?.name}}</div>
             <div class="group-description" q4Zendesk q4Jira [textWithId]="group?.description" [darkBackground]="true"></div>
         </div>
-        <div class="group-content-count">{{group?.workflows.length}} {{group?.workflows.length > 1 ? 'items': 'item'}}</div>
+        <div class="group-content-count">{{group?.workflows?.length}} {{group?.workflows?.length > 1 ? 'items': 'item'}}</div>
         <div class="group-expanded-status link" (click)="expand()">
             <i class="fas" [ngClass]="{'fa-angle-up': expanded, 'fa-angle-down': !expanded}"></i>
         </div>

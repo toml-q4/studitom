@@ -40,6 +40,9 @@ export class WorkflowsComponent implements OnChanges {
         workflowModel.type = workflow.type;
         workflowModel.languageId = workflow.languageId;
         workflowModel.selected = false;
+        workflowModel.isActive = workflow.isActive;
+        workflowModel.isDeleted = workflow.isDeleted;
+
         this.workflowModels.push(workflowModel);
       });
     }
