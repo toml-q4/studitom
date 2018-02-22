@@ -20,7 +20,7 @@ export class JiraDirective implements OnChanges {
       const matchedIds = currentHTML.match(matcher);
 
       matchedIds.forEach(matchId => {
-        currentHTML = currentHTML.replace(matchId, `<a class="support-link ${this.darkBackground ? 'dark-background' : 'jira'}" href="http://jira.com/${matchId}" target="_blank">JIRA ${matchId}</a>`)
+        currentHTML = currentHTML.replace(matchId, `<a class="support-link ${this.darkBackground ? 'dark-background' : 'jira'}" href="http://jira.com/${matchId}" target="_blank" title="Open in new tab">JIRA ${matchId}</a>`)
       });
 
       this.el.nativeElement.innerHTML = currentHTML;

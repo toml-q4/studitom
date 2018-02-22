@@ -12,7 +12,7 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
     this.items = [
-      {label: 'Profile', icon: 'fa-id-card',routerLink: ['/profile']},
+      {label: 'Profile', icon: 'fa-id-card', routerLink: ['/profile']},
       {label: 'Settings', icon: 'fa-cog', routerLink: ['/settings']}
     ];
   }
