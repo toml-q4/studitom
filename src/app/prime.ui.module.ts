@@ -4,6 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import { CheckboxModule } from 'primeng/checkbox';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 @NgModule({
   imports:
@@ -12,7 +13,8 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
       ButtonModule,
       DropdownModule,
       CheckboxModule,
-      OverlayPanelModule
+      OverlayPanelModule,
+      ProgressSpinnerModule
     ],
   exports:
     [
@@ -20,7 +22,8 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
       ButtonModule,
       DropdownModule,
       CheckboxModule,
-      OverlayPanelModule
+      OverlayPanelModule,
+      ProgressSpinnerModule
     ]
 })
 export class PrimeUiModule { }

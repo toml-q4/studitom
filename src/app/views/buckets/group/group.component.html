@@ -2,7 +2,7 @@
     <div class="group-header">
         <div class="group-status"></div>
         <div class="group-details">
-            <div class="group-name link">{{group?.name}}</div>
+            <div class="group-name">{{group?.name}}</div>
             <div class="group-description" q4Zendesk q4Jira [textWithId]="group?.description" [darkBackground]="true"></div>
         </div>
         <div class="group-content-count">{{group?.workflows?.length}} {{group?.workflows?.length > 1 ? 'items': 'item'}}</div>

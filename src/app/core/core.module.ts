@@ -4,10 +4,14 @@ import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
 import { AuthInterceptorService } from './auth-interceptor.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { SsoComponent } from './sso/sso.component';
+import { PrimeUiModule } from '../prime.ui.module';
 
 @NgModule({
-    imports: [ CommonModule ],
+    imports: [ CommonModule, PrimeUiModule ],
+    declarations: [SsoComponent],
     providers: [ AuthService, AuthGuard, { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true } ],
+    exports: [SsoComponent]
 })
 
 export class CoreModule { }
