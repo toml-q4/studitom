@@ -43,6 +43,7 @@ export class WorkflowsComponent implements OnChanges {
         workflowModel.selected = false;
         workflowModel.isActive = workflow.isActive;
         workflowModel.isDeleted = workflow.isDeleted;
+        workflowModel.adminUrl = workflow.adminUrl;
 
         workflowModels.push(workflowModel);
       });
@@ -55,9 +56,6 @@ export class WorkflowsComponent implements OnChanges {
     return workflowModel ? workflowModel.id : undefined;
   }
 
-  deplay(time: number) {
-    return new Promise((resolve) => setTimeout(resolve, time));
-  }
   showWorkflow($event, opWorkflow, workflow: WorkflowModel) {
     clearTimeout(this.workflowTimeout);
     this.workflowTimeout = setTimeout(() => {

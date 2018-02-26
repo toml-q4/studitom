@@ -7,4 +7,5 @@ export class WorkflowModel {
   public selected: boolean;
   public isActive: boolean;
   public isDeleted: boolean;
+  public adminUrl: string;
 }

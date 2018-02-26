@@ -13,7 +13,9 @@
         <i class="fas fa-microphone" (mouseover)="showWorkflow($event, opWorkflow, workflow)" (mouseout)="hideWorkflow(opWorkflow)"></i>
     </div>
     <div class="workflow-details">
-        <span class="link" (click)="edit(workflow)" title="Edit in new tab">{{workflow.name}}</span>
+        <span>
+          <a href="{{workflow.adminUrl}}" target="_blank" title="Edit in new tab">{{workflow.name}}</a>
+        </span>
         <span class="workflow-subtitle">Updated 00/00/00 @00:00 by jenc</span>
         <span class="stat badge badge-muted" *ngIf="!workflow.isActive">Inactive</span>
         <span class="stat badge badge-danger" *ngIf="workflow.isDeleted">Deleted</span>

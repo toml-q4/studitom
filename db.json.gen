@@ -31,6 +31,7 @@
             status: '{{random("Live", "LivePending", "InProgress","ForApproval","Unknown")}}',
             isActive: '{{bool()}}',
             isDeleted: '{{bool()}}',
+            adminUrl: '{{url()}}',
             lastEdited: '{{date(new Date(2017, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ssZ")}}'
         }
     ]

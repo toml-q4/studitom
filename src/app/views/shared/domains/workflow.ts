@@ -6,4 +6,5 @@ export interface Workflow {
   languageId: number;
   isActive: boolean;
   isDeleted: boolean;
+  adminUrl: string;
 }
