@@ -12,7 +12,6 @@ export class WorkflowsComponent implements OnChanges {
   @Input() workflows: Workflow[];
   @Input() ungrouped: boolean;
   workflowModels: WorkflowModel[] = new Array<WorkflowModel>();
-  virtualWorkflowModels: WorkflowModel[] = new Array<WorkflowModel>();
   selectedAll: boolean;
   hoverDelay = 400;
   workflowTimeout: any;
@@ -33,6 +32,7 @@ export class WorkflowsComponent implements OnChanges {
   }
   loadWorkflows() {
     if (this.workflows !== undefined) {
+      const workflowModels = new Array<WorkflowModel>();
       this.workflows.forEach(workflow => {
         const workflowModel = new WorkflowModel();
         workflowModel.id = workflow.id;
@@ -44,10 +44,10 @@ export class WorkflowsComponent implements OnChanges {
         workflowModel.isActive = workflow.isActive;
         workflowModel.isDeleted = workflow.isDeleted;
 
-        this.workflowModels.push(workflowModel);
+        workflowModels.push(workflowModel);
       });
 
-      this.virtualWorkflowModels = this.workflowModels;
+      this.workflowModels = workflowModels;
     }
   }
 
@@ -68,32 +68,5 @@ export class WorkflowsComponent implements OnChanges {
   hideWorkflow(opWorkflow) {
     clearTimeout(this.workflowTimeout);
     opWorkflow.hide();
-  }
-
-  hideInactive() {
-    const filteredWorkflowModels = this.workflowModels.filter((workflow) => workflow.isActive);
-
-    if (filteredWorkflowModels.length <= this.virtualWorkflowModels.length) {
-      filteredWorkflowModels.forEach((workflowModel, index) => this.virtualWorkflowModels[index] = workflowModel);
-      this.virtualWorkflowModels.length = filteredWorkflowModels.length;
-    } else {
-      filteredWorkflowModels.forEach((workflowModel, index) => {
-        if (index >= this.virtualWorkflowModels.length) {
-          this.virtualWorkflowModels.push(workflowModel);
-        } else {
-          this.virtualWorkflowModels[index] = workflowModel;
-        }
-      });
-    }
-  }
-
-  showAll() {
-    this.workflowModels.forEach((workflowModel, index) => {
-      if (index >= this.virtualWorkflowModels.length) {
-        this.virtualWorkflowModels.push(workflowModel);
-      } else {
-        this.virtualWorkflowModels[index] = workflowModel;
-      }
-    });
   }
 }

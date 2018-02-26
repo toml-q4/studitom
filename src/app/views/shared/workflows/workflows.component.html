@@ -1,7 +1,5 @@
 <div class="workflow-header" [ngClass]="{'ungrouped': ungrouped}">
     <div class="workflow-header-item">Item
-        <p-button (click)="hideInactive()" [label]="'Hide Inactive'"></p-button>
-        <p-button (click)="showAll()" [label]="'Show All'"></p-button>
     </div>
     <div class="workflow-header-status">Status</div>
     <div class="workflow-header-preview">Preview</div>
@@ -10,7 +8,7 @@
     </div>
 </div>
 
-<div class="workflow" *ngFor="let workflow of virtualWorkflowModels; trackBy: trackById">
+<div class="workflow" *ngFor="let workflow of workflowModels; trackBy: trackById">
     <div class="workflow-type">
         <i class="fas fa-microphone" (mouseover)="showWorkflow($event, opWorkflow, workflow)" (mouseout)="hideWorkflow(opWorkflow)"></i>
     </div>

@@ -1,0 +1,26 @@
+hideInactive() {
+  const filteredWorkflowModels = this.workflowModels.filter((workflow) => workflow.isActive);
+
+  if (filteredWorkflowModels.length <= this.virtualWorkflowModels.length) {
+    filteredWorkflowModels.forEach((workflowModel, index) => this.virtualWorkflowModels[index] = workflowModel);
+    this.virtualWorkflowModels.length = filteredWorkflowModels.length;
+  } else {
+    filteredWorkflowModels.forEach((workflowModel, index) => {
+      if (index >= this.virtualWorkflowModels.length) {
+        this.virtualWorkflowModels.push(workflowModel);
+      } else {
+        this.virtualWorkflowModels[index] = workflowModel;
+      }
+    });
+  }
+}
+
+showAll() {
+  this.workflowModels.forEach((workflowModel, index) => {
+    if (index >= this.virtualWorkflowModels.length) {
+      this.virtualWorkflowModels.push(workflowModel);
+    } else {
+      this.virtualWorkflowModels[index] = workflowModel;
+    }
+  });
+}
