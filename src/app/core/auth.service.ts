@@ -3,6 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/delay';
+import { User } from '../shared/domains/user';
 
 @Injectable()
 export class AuthService {
@@ -24,5 +25,11 @@ export class AuthService {
 
   logout(): void {
     this.token = '';
+  }
+
+  getUser() {
+    const user = new User();
+    user.email = 'lion@mail.com'
+    return user;
   }
 }

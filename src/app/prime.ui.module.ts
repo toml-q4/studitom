@@ -5,6 +5,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { CheckboxModule } from 'primeng/checkbox';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
   imports:
@@ -14,7 +15,8 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
       DropdownModule,
       CheckboxModule,
       OverlayPanelModule,
-      ProgressSpinnerModule
+      ProgressSpinnerModule,
+      DialogModule
     ],
   exports:
     [
@@ -23,7 +25,8 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
       DropdownModule,
       CheckboxModule,
       OverlayPanelModule,
-      ProgressSpinnerModule
+      ProgressSpinnerModule,
+      DialogModule
     ]
 })
 export class PrimeUiModule { }

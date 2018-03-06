@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Workflow } from '../domains/workflow';
 import { PreviewUrl } from '../domains/previewUrl';
+import { WorkflowUpdateRequest } from '../domains/workflow-update-request';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class WorkflowService {
@@ -18,5 +20,13 @@ export class WorkflowService {
 
   getPreviewLink(workflow: Workflow) {
     return this.http.get<PreviewUrl>(`http://localhost:3000/previewUrl`);
+  }
+
+  submit(workflowUpdateRequest: WorkflowUpdateRequest) {
+    return new Observable();
+  }
+
+  publish(workflowUpdateRequest: WorkflowUpdateRequest) {
+    return new Observable();
   }
 }

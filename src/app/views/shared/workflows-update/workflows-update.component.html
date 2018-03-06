@@ -1,0 +1,21 @@
+<div class="workflow-update">
+    <div class="message" *ngIf="updatedWorkflows.length > 0">
+        <div class="updated">
+            {{updatedWorkflows?.length}} items will be updated.
+        </div>
+
+        <div class="skipped" *ngIf="updatedWorkflows.length > 0 && skippedWorkflows.length > 0">
+            {{skippedWorkflows?.length}} items will be skipped.
+        </div>
+    </div>
+    <div class="message-no-eligible" *ngIf="updatedWorkflows.length === 0">
+        There are no eligible items for this action.
+    </div>
+    <div class="comment">
+        <textarea pInputTextarea [(ngModel)]="comment" autoResize="true" [rows]="5" [cols]="30" [disabled]="updatedWorkflows.length === 0"></textarea>
+    </div>
+    <div class="action">
+        <button pButton type="button" (click)="cancel()" label="CANCEL"></button>
+        <button pButton type="button" (click)="act()" label="{{actionLabel}}" [disabled]="updatedWorkflows.length === 0"></button>
+    </div>
+</div>

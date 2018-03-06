@@ -18,6 +18,9 @@ export class BucketsComponent implements OnInit {
 
   bucketFilterSelections: SelectItem[] = new Array<SelectItem>();
   selectedBucketFilter: BucketFilter;
+
+  dialogVisible = false;
+  dialogHeader = 'Dialog Header';
   constructor(private bucketService: BucketService) {
   }
 
@@ -78,4 +81,33 @@ export class BucketsComponent implements OnInit {
   trackByBucketId(index, bucket) {
     return bucket ? bucket.id : undefined;
   }
+
+  onErrored($event: any) {
+    this.notificationService.showError('Failed to complete. Try again later or contact support.');
+    this.displayDialog = false;
+  }
+
+  onCompleted(updateReport: UpdateReport) {
+    let message: string;
+    if (updateReport.workflowAction === WorkflowAction.Submit) {
+      message = `Content has been submitted for approval.`;
+    } else {
+      message = `Content has been published.`;
+    }
+
+    if (updateReport.failed > 0) {
+      message = `${message} However, there ${updateReport.failed > 1 ? 'are' : 'is'}
+       ${updateReport.failed} ${updateReport.failed > 1 ? 'items' : 'item'} skipped.`;
+    }
+
+    this.notificationService.showInfo(message);
+
+    if (updateReport.succeeded > 0) {
+      this.selectedWorkflows = [];
+      this.modified.emit();
+    }
+    this.displayDialog = false;
+  }
+
+  onCanceled($event: any) { this.displayDialog = false; }
 }

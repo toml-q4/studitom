@@ -6,6 +6,7 @@ import { SharedModule } from '../../shared/shared.module';
 import { GroupService } from './services/group.service';
 import { WorkflowsComponent } from './workflows/workflows.component';
 import { PrimeUiModule } from '../../prime.ui.module';
+import { WorkflowsUpdateComponent } from './workflows-update/workflows-update.component';
 
 @NgModule({
     imports: [
@@ -13,13 +14,15 @@ import { PrimeUiModule } from '../../prime.ui.module';
       PrimeUiModule
     ],
     declarations: [
-      WorkflowsComponent
+      WorkflowsComponent,
+      WorkflowsUpdateComponent
     ],
     providers: [
       BucketService, WorkflowService, GroupService
     ],
     exports: [
-      WorkflowsComponent
+      WorkflowsComponent,
+      WorkflowsUpdateComponent
     ]
 })
 
