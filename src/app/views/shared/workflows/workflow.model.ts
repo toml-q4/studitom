@@ -5,4 +5,7 @@ export class WorkflowModel {
   public status: string;
   public languageId: number;
   public selected: boolean;
+  public isActive: boolean;
+  public isDeleted: boolean;
+  public adminUrl: string;
 }

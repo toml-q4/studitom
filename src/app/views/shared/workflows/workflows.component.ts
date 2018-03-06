@@ -32,6 +32,7 @@ export class WorkflowsComponent implements OnChanges {
   }
   loadWorkflows() {
     if (this.workflows !== undefined) {
+      const workflowModels = new Array<WorkflowModel>();
       this.workflows.forEach(workflow => {
         const workflowModel = new WorkflowModel();
         workflowModel.id = workflow.id;
@@ -40,8 +41,14 @@ export class WorkflowsComponent implements OnChanges {
         workflowModel.type = workflow.type;
         workflowModel.languageId = workflow.languageId;
         workflowModel.selected = false;
-        this.workflowModels.push(workflowModel);
+        workflowModel.isActive = workflow.isActive;
+        workflowModel.isDeleted = workflow.isDeleted;
+        workflowModel.adminUrl = workflow.adminUrl;
+
+        workflowModels.push(workflowModel);
       });
+
+      this.workflowModels = workflowModels;
     }
   }
 
@@ -49,9 +56,6 @@ export class WorkflowsComponent implements OnChanges {
     return workflowModel ? workflowModel.id : undefined;
   }
 
-  deplay(time: number) {
-    return new Promise((resolve) => setTimeout(resolve, time));
-  }
   showWorkflow($event, opWorkflow, workflow: WorkflowModel) {
     clearTimeout(this.workflowTimeout);
     this.workflowTimeout = setTimeout(() => {

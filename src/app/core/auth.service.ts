@@ -7,8 +7,6 @@ import 'rxjs/add/operator/delay';
 @Injectable()
 export class AuthService {
   TOKEN_KEY = 'token';
-  isLoggedIn = false;
-  redirectUrl: string;
 
   constructor() { }
 
@@ -16,11 +14,15 @@ export class AuthService {
     return localStorage.getItem(this.TOKEN_KEY);
   }
 
-  login(): Observable<boolean> {
-    return Observable.of(true).delay(1000).do(val => this.isLoggedIn = true);
+  set token(value: string) {
+    localStorage.setItem(this.TOKEN_KEY, value);
+  }
+
+  get isLoggedIn() {
+    return this.token !== ''; // simplified
   }
 
   logout(): void {
-    this.isLoggedIn = false;
+    this.token = '';
   }
 }

@@ -1,5 +1,6 @@
 <div class="workflow-header" [ngClass]="{'ungrouped': ungrouped}">
-    <div class="workflow-header-item">Item</div>
+    <div class="workflow-header-item">Item
+    </div>
     <div class="workflow-header-status">Status</div>
     <div class="workflow-header-preview">Preview</div>
     <div class="workflow-header-check">
@@ -9,14 +10,15 @@
 
 <div class="workflow" *ngFor="let workflow of workflowModels; trackBy: trackById">
     <div class="workflow-type">
-        <i class="fas fa-microphone"></i>
-    </div>
-    <div class="link" (mouseover)="showWorkflow($event, opWorkflow, workflow)" (mouseout)="hideWorkflow(opWorkflow)">
-        <i class="fas fa-info-circle"></i>
+        <i class="fas fa-microphone" (mouseover)="showWorkflow($event, opWorkflow, workflow)" (mouseout)="hideWorkflow(opWorkflow)"></i>
     </div>
     <div class="workflow-details">
-        <span class="link" (click)="edit(workflow)" title="Edit in new tab">{{workflow.name}}</span>
+        <span>
+          <a href="{{workflow.adminUrl}}" target="_blank" title="Edit in new tab">{{workflow.name}}</a>
+        </span>
         <span class="workflow-subtitle">Updated 00/00/00 @00:00 by jenc</span>
+        <span class="stat badge badge-muted" *ngIf="!workflow.isActive">Inactive</span>
+        <span class="stat badge badge-danger" *ngIf="workflow.isDeleted">Deleted</span>
     </div>
     <div class="workflow-status">{{workflow.status}}</div>
     <div class="workflow-preview-link link">

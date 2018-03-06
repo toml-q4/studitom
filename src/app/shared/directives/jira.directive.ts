@@ -18,10 +18,11 @@ export class JiraDirective implements OnChanges {
       const matcher = /((?!([A-Z0-9a-z]{1,10})-?$)[A-Z]{1}[A-Z0-9]+-\d+)/g;
 
       const matchedIds = currentHTML.match(matcher);
-
-      matchedIds.forEach(matchId => {
-        currentHTML = currentHTML.replace(matchId, `<a class="support-link ${this.darkBackground ? 'dark-background' : 'jira'}" href="http://jira.com/${matchId}" target="_blank" title="Open in new tab">JIRA ${matchId}</a>`)
-      });
+      if (matchedIds !== null) {
+        matchedIds.forEach(matchId => {
+          currentHTML = currentHTML.replace(matchId, `<a class="support-link ${this.darkBackground ? 'dark-background' : 'jira'}" href="http://jira.com/${matchId}" target="_blank" title="Open in new tab">JIRA ${matchId}</a>`)
+        });
+      }
 
       this.el.nativeElement.innerHTML = currentHTML;
     }
